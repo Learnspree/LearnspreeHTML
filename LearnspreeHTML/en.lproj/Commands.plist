@@ -1,0 +1,3884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>All HTML5</key>
+	<dict>
+		<key>Categories</key>
+		<dict/>
+		<key>Commands</key>
+		<array>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;!--...--&gt;</string>
+				<key>Description</key>
+				<string>Defines a page comment</string>
+				<key>Example</key>
+				<string>&lt;!-- This is a comment describing the HTML below --&gt;</string>
+				<key>LongDescription</key>
+				<string>Comments are not visible in the page rendered by the browser. They are for benefit of developers mostly as source code notes. Can also be used to hide scripts from browsers who do not support them. </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;!DOCTYPE&gt; </string>
+				<key>Description</key>
+				<string>Defines the doc type</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;Doc Title&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+  This is where the main content of the document would go.
+  &lt;/body&gt;
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>The &lt;!DOCTYPE&gt; declaration should be added to all pages to instruct the browser which type of document (i.e. HTML) is being rendered.
+
+The &lt;!DOCTYPE&gt; declaration must be the very first element in your HTML document - before the &lt;html&gt; tag.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;a&gt;</string>
+				<key>Description</key>
+				<string>Defines a hyperlink</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+    &lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot;&gt;Launch Google in a new browser window!&lt;/a&gt;
+    &lt;br/&gt;
+    &lt;a href=&quot;#destination_name&quot;&gt;Destination&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;a name=&quot;destination_name&quot;&gt;&lt;/a&gt;
+&lt;/p&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>
+Used to specify a hyperlink to another web page. Can specify the target window so that the link opens in the current window or a new one. Can be combined with &lt;img&gt; to display link as an image.
+
+Also, can be used for intra-document linking (linking to a specific location on the same page and to specific locations on another web page).
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;abbr&gt;</string>
+				<key>Description</key>
+				<string>Defines an abbreviation</string>
+				<key>Example</key>
+				<string>The &lt;abbr title=&quot;International Business Machines&quot;&gt;IBM&lt;/abbr&gt; company is a major computer company. </string>
+				<key>LongDescription</key>
+				<string>Used for indicating an abbreviation term. Use the &quot;title&quot; attribute to specify the expanded version of the term surrounded by this tag. Limited browser support for this tag.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;address&gt;</string>
+				<key>Description</key>
+				<string>Indicates the contact information of the document author</string>
+				<key>Example</key>
+				<string>&lt;address&gt;
+Author:&lt;br /&gt;
+&lt;a href=&quot;mailto:john.smith@xyz.com&quot;&gt;John Smith&lt;/address&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used to indicate an address in relation to the author of the current HTML document. Not intended for use in displaying postal addresses.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;area&gt;</string>
+				<key>Description</key>
+				<string>Defines an area inside an image-map</string>
+				<key>Example</key>
+				<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+    &lt;map name=&quot;rainbowmap&quot;&gt;
+        &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
+        &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+        &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+    &lt;/map&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines an area within an image-map (see &lt;map&gt; tag). Each individual area within an image map can be used to direct the user to a different web page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;article&gt;</string>
+				<key>Description</key>
+				<string>Defines an article (independent content)</string>
+				<key>Example</key>
+				<string>&lt;article&gt;
+    &lt;h1&gt;This is a story about html&lt;/h1&gt;
+    &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Html&quot;&gt;HTML on Wikipedia&lt;/a&gt;. HTML stands for Hyper-Text Markup Language. This article can describe lots of things about HTML.&lt;/p&gt;
+&lt;/article&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Used to mark a part of a page which could stand alone as independent content if linked by another web page - for example blog posts can be distributed for syndication.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;aside&gt;</string>
+				<key>Description</key>
+				<string>Defines content other than the main page content</string>
+				<key>Example</key>
+				<string>&lt;p&gt;The city of Boston is in New England&lt;/p&gt;
+&lt;aside&gt;
+    &lt;strong&gt;About Boston&lt;/strong&gt;
+    Boston is a city located in the state of New England. The Red Sox baseball team play at Fenway Park there.
+&lt;/aside&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+				
+Used to mark content in a page which is not necessarily part of the main subject of the article but is related to it. This tag should be used for information which can stand alone on its own.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;audio&gt;</string>
+				<key>Description</key>
+				<string>Defines sound content</string>
+				<key>Example</key>
+				<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    Your browser does not support the audio element, which is new to HTML5.
+&lt;/audio&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Defines audio / sound content for the page. Use this tag to link to an audio file (e.g. .wav) via the &quot;src&quot; attribute. Any content within the &lt;audio&gt; tag itself is only displayed if the browser does not support it.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;b&gt;</string>
+				<key>Description</key>
+				<string>Specifies bold content (text)</string>
+				<key>Example</key>
+				<string>This tag can be used to specify &lt;b&gt;bold&lt;/b&gt; text.</string>
+				<key>LongDescription</key>
+				<string>This tag can be used to specify bold text. Note however that there are often better ways (such as use of headings tags or css properties) to highlight text.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;base&gt;</string>
+				<key>Description</key>
+				<string>Specifies the base URL for all links in document</string>
+				<key>Example</key>
+				<string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;base href=&quot;http://www.xyz.com/images/&quot; target=&quot;_blank&quot; /&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;img src=&quot;image1.jpg&quot; width=&quot;50&quot; height=&quot;50&quot; alt=&quot;TestImage&quot; /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;base&gt; tag is used to specify a base URL for all links in the document (i.e.  &lt;a&gt; elements). This tag can only be specified once in the document and must be contained within the &lt;head&gt;.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;bdo&gt;</string>
+				<key>Description</key>
+				<string>Overrides or changes the default text direction</string>
+				<key>Example</key>
+				<string>
+&lt;bdo dir=&quot;rtl&quot;&gt;
+  This text will read from right to left.
+&lt;/bdo&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used to set the text direction for the content contained within the elements&apos; tags. For example this is useful if displaying content in languages that read from right-to-left.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;blockquote&gt;</string>
+				<key>Description</key>
+				<string>A document section quoted from another source</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;Here is a quote about HTML from wikipedia:&lt;/p&gt;
+
+&lt;blockquote cite=&quot;http://en.wikipedia.org/wiki/Html&quot;&gt;
+  HyperText Markup Language (HTML) is the main markup language for web pages. HTML elements are the basic building-blocks of webpages.
+&lt;/blockquote&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+Used to display large quotations from a different source (usually more than one line). Browsers might render this content indented to highlight it.
+
+Note this is different to the &lt;q&gt; tag used to display short quotations.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;body&gt;</string>
+				<key>Description</key>
+				<string>Defines the main body of the document</string>
+				<key>Example</key>
+				<string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Doc Title&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    This is where the main content of the document would go.
+  &lt;/body&gt;
+
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used to define the main content of the HTML document. All content for display should be placed within this tag.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;br&gt;</string>
+				<key>Description</key>
+				<string>Defines a single line break</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+  This is one line. &lt;br/&gt;
+  This text will appear on the next line.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used to insert a line-break into the document. Subsequent content is displayed on the next line.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;button&gt;</string>
+				<key>Description</key>
+				<string>Defines a clickable button</string>
+				<key>Example</key>
+				<string>The following button automatically gets input focus when the page loads: &lt;button type=&quot;button&quot; autofocus=&quot;autofocus&quot;&gt;This is a Button
+&lt;/button&gt;</string>
+				<key>LongDescription</key>
+				<string>Defines a simple button. Usually used within a &lt;form&gt; but can be used standalone also.
+
+Inside a &lt;button&gt; element you can put content, like text or images. This is the difference between this element and buttons created with the &lt;input&gt; element.
+
+The &quot;onclick&quot; attribute can be used to execute javascript code to take action when clicked.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;canvas&gt;</string>
+				<key>Description</key>
+				<string>Used to draw graphics, on the fly, via scripting (usually JavaScript)</string>
+				<key>Example</key>
+				<string>
+&lt;script&gt;
+    var canvas1 = document.getElementById(&apos;myCanvas&apos;);
+    if(canvas1.getContext) {
+    var context = canvas1.getContext(&apos;2d&apos;);
+    context.fillRect(50,25,25,25);}
+&lt;/script&gt;
+
+&lt;canvas id=&quot;myCanvas&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+    Your browser doesn&apos;t support canvas.
+&lt;/canvas&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+New tag in HTML5 which allows complex drawing via javascript code within its defined area. Note any content within the &lt;canvas&gt; tag itself is only displayed if the browser does not support it.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;caption&gt;</string>
+				<key>Description</key>
+				<string>Defines a table&apos;s caption</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;caption&gt;Dates in the 1980&apos;s&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used with the &lt;table&gt; tag to define a caption which is displayed above the rendered table.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;cite&gt;</string>
+				<key>Description</key>
+				<string>Defines the title of a work</string>
+				<key>Example</key>
+				<string>&lt;cite&gt;Dracula&lt;/cite&gt; by Bram Stoker. A classic book.</string>
+				<key>LongDescription</key>
+				<string>Defines text which represents the title of a work such as a book or a film. The browser will render this content appropriately such as using italics.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;code&gt;</string>
+				<key>Description</key>
+				<string>Defines a section of computer code</string>
+				<key>Example</key>
+				<string>
+Below is some C# .NET code:
+
+&lt;code&gt;
+int x = 10;
+int y = 20;
+int z = x + y;
+
+MessageBox.Show(&quot;x + y = &quot; + z);
+&lt;/code&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines text which represents computer code. The browser will render this to indicate this (usually in a fixed font such as courier-new).</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;col&gt;</string>
+				<key>Description</key>
+				<string>Specifies column properties for each column within a &lt;colgroup&gt; element </string>
+				<key>Example</key>
+				<string>&lt;table border=&quot;0&quot;&gt;
+    &lt;colgroup&gt;
+        &lt;col style=&quot;background-color:green&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Day&lt;/th&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines an individual column or set of columns within a &lt;colgroup&gt; tag. Can set styles and other properties on that set of columns.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;colgroup&gt;</string>
+				<key>Description</key>
+				<string>Specifies a group of one or more columns in a table for formatting</string>
+				<key>Example</key>
+				<string>&lt;table border=&quot;0&quot;&gt;
+    &lt;colgroup&gt;
+        &lt;col style=&quot;background-color:green&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Day&lt;/th&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;colgroup&gt; tag is used to specify a set of styles and properties on any number of columns which can be grouped together. See example.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;command&gt;</string>
+				<key>Description</key>
+				<string>Defines a command that can be invoked by the user</string>
+				<key>Example</key>
+				<string>
+&lt;menu&gt;
+    &lt;command type=&quot;command&quot; label=&quot;GO!&quot; onclick=&quot;submitRequest()&quot;&gt;GO&lt;/command&gt;
+&lt;/menu&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+The &lt;command&gt; tag is used to define a particular command that can be shared by multiple controls on the interface (e.g. Radiobutton, checkbox, command button). This allows sharing of features such as enabled state between the linked controls.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;datalist&gt;</string>
+				<key>Description</key>
+				<string>Defines a list of predefined auto-complete options for a text input field.</string>
+				<key>Example</key>
+				<string>
+&lt;input list=&quot;countries&quot; /&gt;
+
+&lt;datalist id=&quot;countries&quot;&gt;
+    &lt;option value=&quot;Germany&quot;&gt;
+    &lt;option value=&quot;France&quot;&gt;
+    &lt;option value=&quot;Ireland&quot;&gt;
+    &lt;option value=&quot;Brazil&quot;&gt;
+    &lt;option value=&quot;Sweden&quot;&gt;
+&lt;/datalist&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+The &lt;datalist&gt; tag is used to provide auto-complete options on an &lt;input&gt; field which has a &quot;list&quot; attribute defined on it (see example). </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;dd&gt;</string>
+				<key>Description</key>
+				<string>Defines the description of a term in a definition list</string>
+				<key>Example</key>
+				<string>&lt;dl&gt;
+    &lt;dt&gt;Black&lt;/dt&gt;
+    &lt;dd&gt;A dark colour&lt;/dd&gt;
+    &lt;dt&gt;Yellow&lt;/dt&gt;
+    &lt;dd&gt;A bright colour&lt;/dd&gt;
+&lt;/dl&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).
+
+          The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;del&gt;</string>
+				<key>Description</key>
+				<string>Marks text that has been deleted from the document</string>
+				<key>Example</key>
+				<string>&lt;p&gt;
+The quick brown &lt;del&gt;cat&lt;/del&gt; &lt;ins&gt;fox&lt;/ins&gt; jumped over the lazy dog.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>&lt;del&gt; tag is used to mark text that has been deleted from a HTML document (for change tracking). Browsers will generally show this text with a strike-through line through it. See also &lt;ins&gt; tag for marking inserted text.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;details&gt;</string>
+				<key>Description</key>
+				<string>Specifies extra details which the user can view or hide</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        This is where the main content of the document would go.
+
+        &lt;details&gt;
+        Copyright 2012 - HtmlCompany Ltd.
+        &lt;/details&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+New in HTML5.
+          
+The &lt;details&gt; tag can be used to add any content to a page which is usually hidden by default by the browser but can be opened by the user to reveal the additional information.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;dfn&gt;</string>
+				<key>Description</key>
+				<string>Defines a definition term</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+    &lt;dfn&gt;Book&lt;/dfn&gt;: Something you read
+    &lt;dfn&gt;Television&lt;/dfn&gt;: Something you watch
+&lt;/p&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>The browser applies formatting to mark the text inside the &lt;dfn&gt; tag as a &quot;definition&quot; term. </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;div&gt;</string>
+				<key>Description</key>
+				<string>Defines a section in a document</string>
+				<key>Example</key>
+				<string>
+&lt;div style=&quot;color: red&quot;&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;ol&gt;
+        &lt;li&gt;One&lt;/li&gt;
+        &lt;li&gt;Two&lt;/li&gt;
+        &lt;li&gt;Three&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+The &lt;div&gt; tag is used to define a section in a HTML document. It is used to group together multiple HTML elements and can be used to apply styles to that group of elements via CSS.
+
+In HTML5, it is now an element that defines generic containers within the content of a page. It is an element that is not meant to represent anything semantically.
+
+In HTML5 you are encouraged to use more semantically relevant elements like &lt;section&gt; before you use the DIV elements.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;dl&gt;</string>
+				<key>Description</key>
+				<string>Defines a definition list</string>
+				<key>Example</key>
+				<string>
+&lt;dl&gt;
+    &lt;dt&gt;Black&lt;/dt&gt;
+    &lt;dd&gt;A dark colour&lt;/dd&gt;
+    &lt;dt&gt;Yellow&lt;/dt&gt;
+    &lt;dd&gt;A bright colour&lt;/dd&gt;
+&lt;/dl&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).
+
+The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;dt&gt;</string>
+				<key>Description</key>
+				<string>Defines an individual term in a definition list</string>
+				<key>Example</key>
+				<string>
+&lt;dl&gt;
+    &lt;dt&gt;Black&lt;/dt&gt;
+    &lt;dd&gt;A dark colour&lt;/dd&gt;
+    &lt;dt&gt;Yellow&lt;/dt&gt;
+    &lt;dd&gt;A bright colour&lt;/dd&gt;
+&lt;/dl&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).
+
+The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;em&gt;</string>
+				<key>Description</key>
+				<string>Defines emphasized text </string>
+				<key>Example</key>
+				<string>You really &lt;em&gt;must&lt;/em&gt; learn about HTML.</string>
+				<key>LongDescription</key>
+				<string>The browser applies formatting to mark the text inside the &lt;em&gt; tag as emphasised.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;embed&gt;</string>
+				<key>Description</key>
+				<string>Defines an external application or plug-in </string>
+				<key>Example</key>
+				<string>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Short Movie&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;EMBED SRC=&quot;shortmovie.mov&quot;, WIDTH=150, HEIGHT=250 CONTROLS=TRUE&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+This tag is re-introduced to HTML as part of HTML5. It has similar purpose to the &lt;object&gt; tag but is intended as a more cross-browser replacement, as &lt;object&gt; does not have full support in some browsers.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;fieldset&gt;</string>
+				<key>Description</key>
+				<string>Groups related elements in a form</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+    &lt;form action=&quot;result.jsp&quot;&gt;
+        Enter Colors:
+        &lt;fieldset&gt;
+        Color: &lt;input type=&quot;text&quot; /&gt;&lt;br /&gt;
+        Size: &lt;input type=&quot;text&quot; /&gt;&lt;br /&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>This tag is used to group related elements in a form. Browsers will draw a box around those elements to indicate their relationship.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;figcaption&gt;</string>
+				<key>Description</key>
+				<string>Defines a caption for a &lt;figure&gt; element</string>
+				<key>Example</key>
+				<string>
+&lt;figure&gt;
+    &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
+    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
+    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+&lt;/figure&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Defines a caption for the &lt;figure&gt; element. Can be placed as either the first or the last child of the &lt;figure&gt; element.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;figure&gt;</string>
+				<key>Description</key>
+				<string>Defines self-contained content </string>
+				<key>Example</key>
+				<string>
+&lt;figure&gt;
+    &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
+    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
+    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+&lt;/figure&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+          
+Defines self-contained content such as images, diagrams etc.
+
+While it is related to the main flow, its position is independent of the main flow.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;footer&gt;</string>
+				<key>Description</key>
+				<string>Defines a footer for a document</string>
+				<key>Example</key>
+				<string>
+&lt;html&gt;
+    &lt;body&gt;
+      &lt;article&gt;
+        &lt;p&gt;Interested in the latest tech developments?&lt;/p&gt;
+        &lt;p&gt;The best source of information is the World Wide Web&lt;/p&gt;
+      &lt;/article&gt;
+        &lt;footer&gt;
+        ©  2011 Techie Industries
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+This tag is used to contain footer information such as author, contact or legal information  for its nearest semantic sectioned content parent element (e.g. its nearest parent &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;details&gt;, &lt;fieldset&gt;, &lt;figure&gt;, &lt;td&gt; )</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;form&gt;</string>
+				<key>Description</key>
+				<string>Defines an HTML form for user input</string>
+				<key>Example</key>
+				<string>&lt;form method=&quot;post&quot; action=&quot;color.aspx&quot;&gt;
+    First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;:&lt;br /&gt;
+    Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;:&lt;br /&gt;
+    Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;:&lt;br /&gt;
+&lt;/form&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>This tag defines a form for accepting user input. It can have any number of child elements for entering information such as: &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt;
+
+There are a number of attributes that are used in form elements, however a form element should contain an action attribute. The action attribute points to a page or controller hosted by a server-side application which processes the form.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;h1&gt; to &lt;h6&gt;</string>
+				<key>Description</key>
+				<string>Defines HTML headings</string>
+				<key>Example</key>
+				<string>&lt;h1&gt;Main Title&lt;/h1&gt;</string>
+				<key>LongDescription</key>
+				<string>Use &lt;h1&gt; to &lt;h6&gt; to define different levels of subject headings in the document in descending order.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;head&gt;</string>
+				<key>Description</key>
+				<string>Defines header information on a document.</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+       &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>The &lt;head&gt; element is the container for all meta-information elements in the document. This includes scripts, style sheets, meta-tags etc.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;header&gt;</string>
+				<key>Description</key>
+				<string>Used to display an introduction for a document</string>
+				<key>Example</key>
+				<string>
+&lt;header&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+&lt;/header&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Use this tag to display an introduction to the document or a group of navigational elements such as next/previous links etc.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;hgroup&gt;</string>
+				<key>Description</key>
+				<string>Groups a set of &lt;h1&gt; to &lt;h6&gt; elements </string>
+				<key>Example</key>
+				<string>
+&lt;hgroup&gt;
+    &lt;h1&gt;Main Title&lt;/h1&gt;
+    &lt;h2&gt;Sub Title&lt;/h2&gt;
+&lt;/hgroup&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+          
+Used to group a set of &lt;h1&gt;…&lt;h6&gt; elements.
+
+When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will mask the lowest level all but the highest level heading in the group from the resulting document outline.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;hr&gt;</string>
+				<key>Description</key>
+				<string>Defines a thematic change in the content</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+
+    &lt;hr/&gt;
+    &lt;p&gt;This is paragraph one.&lt;/p&gt;
+        &lt;hr width=&quot;80%&quot; height=&quot;5px&quot; &gt;
+    &lt;p&gt;This is paragraph two.&lt;/p&gt;
+    &lt;hr/&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>The &lt;hr&gt; tag is used to separate content in a document. It creates a horizontal rule across the document.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;html&gt;</string>
+				<key>Description</key>
+				<string>Defines the root of an HTML document</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>The &lt;html&gt; element is the root element of the HTML document and tells the browser that the document is a HTML document.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;i&gt;</string>
+				<key>Description</key>
+				<string>Indicates emphasised text or expressions</string>
+				<key>Example</key>
+				<string>You &lt;i&gt;cannot&lt;/i&gt; be serious!</string>
+				<key>LongDescription</key>
+				<string>Use this tag to indicate emphasis on certain words in a paragraph.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;iframe&gt;</string>
+				<key>Description</key>
+				<string>Defines an inline frame</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+
+    &lt;iframe SRC=&quot;demo.html&quot; WIDTH=250 HEIGHT=200&gt;
+    &lt;/iframe&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>Use this tag to embed another HTML document within the current document.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;img&gt;</string>
+				<key>Description</key>
+				<string>Defines an image</string>
+				<key>Example</key>
+				<string>&lt;img src=&quot;yellowsun.gif&quot; alt=&quot;sun&quot;/&gt;</string>
+				<key>LongDescription</key>
+				<string>Use this tag to embed an image into the document. Can be combined with the &lt;a&gt; tag to create an image link.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;input&gt;</string>
+				<key>Description</key>
+				<string>Defines an input control</string>
+				<key>Example</key>
+				<string>
+&lt;form action=&quot;LibraryUsers.aspx&quot;&gt;
+    First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;
+    Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;
+    New User?: &lt;input type=&quot;checkbox&quot; name=&quot;new&quot; /&gt; &lt;br/&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Use this tag to create a control on a &lt;form&gt; to receive input from a user. The &quot;type&quot; attribute is used to define what kind of input will be received - see below:
+
+Button: A clickable button
+Checkbox: A checkbox which is on or off
+File: An input field and a &quot;Browse...&quot; button, for file uploads
+Hidden: A hidden input field
+Image: An image as a submit button
+Password: A text input which shows only *** characters to the user
+Radio: A radio button
+Submit: A form submit button. Sends form data to the server.
+Text: A single-line text input field
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;ins&gt;</string>
+				<key>Description</key>
+				<string>Marks text that has been inserted into the document</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+The quick brown &lt;del&gt;cat&lt;/del&gt; &lt;ins&gt;fox&lt;/ins&gt; jumped over the lazy dog.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+&lt;ins&gt; tag is used to mark text that has been inserted into a HTML document (for change tracking). Browsers will generally show this text as underlined. See also &lt;del&gt; tag for marking deleted text.
+
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;kbd&gt;</string>
+				<key>Description</key>
+				<string>Defines keyboard input</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+To start the program type &lt;kbd&gt;run start&lt;/kbd&gt; and press &lt;kbd&gt;enter&lt;/kbd&gt;
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The browser will mark text in the &lt;kbd&gt; tag in a style that represents it as keyboard input.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;label&gt;</string>
+				<key>Description</key>
+				<string>Defines a label for an input element</string>
+				<key>Example</key>
+				<string>&lt;label for=&quot;bnSubmit&quot;&gt;Submit Button&lt;/label&gt; &lt;input type=&quot;submit&quot; id=&quot;bnSubmit&quot; name=&quot;bnSumbit&quot; /&gt;</string>
+				<key>LongDescription</key>
+				<string>Associates some text information with a control on a form. This tag is useful for accessibility on a website as it describes a control&apos;s purpose to visually impared users.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;legend&gt;</string>
+				<key>Description</key>
+				<string>Defines a caption for a &lt;fieldset&gt;</string>
+				<key>Example</key>
+				<string>
+&lt;fieldset&gt;
+    &lt;legend&gt;Employee Data&lt;/legend&gt;
+    Name: &lt;input type=&quot;text&quot; name=&quot;empname&quot; /&gt;
+    Address: &lt;input type=&quot;text&quot; name=&quot;empaddress&quot; /&gt;
+    Title: &lt;input type=&quot;text&quot; name=&quot;jobtitle&quot; /&gt;
+&lt;/fieldset&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;legend&gt; tag is used to specify a caption for a fieldset (see &lt;fieldset&gt; tag). It must be added as the first child of the &lt;fieldset&gt; tag. The fieldset has a frame/border into which this caption will be inserted by the browser.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;li&gt;</string>
+				<key>Description</key>
+				<string>Defines an item within a list </string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    Below is a list of items, which the browser will display in numerical ordered list:
+
+    &lt;ol&gt;
+        &lt;li&gt;One&lt;/li&gt;
+        &lt;li&gt;Two&lt;/li&gt;
+        &lt;li&gt;Three&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</string>
+				<key>LongDescription</key>
+				<string>Used to define a single item in a list. The list could be of various types - e.g. Ordered (&lt;ol&gt;), Un-ordered (&lt;ul&gt;) etc.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;link&gt;</string>
+				<key>Description</key>
+				<string>Defines the relationship between a document and an external resource (most used to link to style sheets)</string>
+				<key>Example</key>
+				<string>
+&lt;head&gt;
+    &lt;link href=&quot;../dojo/dojo/resources/dojo.css&quot; type=&quot;text/css&quot; rel=&quot;StyleSheet&quot; /&gt;
+    &lt;link href=&quot;../dojo/dijit/themes/dijit.css&quot; type=&quot;text/css&quot; rel=&quot;Stylesheet&quot; /&gt;
+&lt;/head&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;link&gt; tag can only be used within the &lt;head&gt; of a document. It is used to link to external resources such as CSS documents so they can be used in the page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;map&gt;</string>
+				<key>Description</key>
+				<string>Defines a client-side image-map </string>
+				<key>Example</key>
+				<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+&lt;map name=&quot;rainbowmap&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+&lt;/map&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines an image-map which is a single image with multiple clickable areas, each leading the user to a different web page. </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;mark&gt;</string>
+				<key>Description</key>
+				<string>Specifies marked/highlighted text</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+This is the &lt;mark&gt;text which is of importance to the reader&lt;/mark&gt; and this is not.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+The &lt;mark&gt; tag can be used to  highlight a portion of text from another source that was not necessarily highlighted by the original document author.
+
+The browser will mark text within this tag in a special manner to highlight it to the reader.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;meta&gt;</string>
+				<key>Description</key>
+				<string>Defines metadata about a HTML document</string>
+				<key>Example</key>
+				<string>
+&lt;head&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Joe Bloggs&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;This page describes all the details about HTML and in particular HTML5 tags&quot; /&gt;
+    &lt;meta name=&quot;Keywords&quot; content=&quot;HTML, HTML5, tags, learning&quot; /&gt;
+&lt;/head&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;meta&gt; tag is used to provide information about the HTML document. Examples include keywords which identify the document content/subject, description or author information.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;nav&gt;</string>
+				<key>Description</key>
+				<string>Defines a set of navigation links</string>
+				<key>Example</key>
+				<string>
+&lt;nav&gt;
+    &lt;a href=&quot;../Colours.html&quot;&gt;Colours&lt;/a&gt;-
+    &lt;a href=&quot;../AllShapes.html&quot;&gt;Shapes&lt;/a&gt;-
+    &lt;a href=&quot;../LargeSizes.aspx&quot;&gt;Sizes&lt;/a&gt;
+&lt;/nav&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Use the &lt;nav&gt; tag to group a collection of &lt;a&gt; hyperlinks. This can be useful for accessibility to help screen readers filter the important information.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;noscript&gt;</string>
+				<key>Description</key>
+				<string>Defines alternative content when a script cannot be run</string>
+				<key>Example</key>
+				<string>
+&lt;script src=&quot;../includes/common.js&quot;&gt;&lt;/script&gt;
+&lt;noscript&gt;
+The common javascript functions cannot be executed on this page - functionality will be affected.
+&lt;/noscript&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;noscript&gt; tag must be placed immediately after a &lt;script&gt; tag. If the &lt;script&gt; content cannot be executed, the content of the &lt;noscript&gt; tag will be shown instead.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;object&gt;</string>
+				<key>Description</key>
+				<string>Defines an embedded object or component</string>
+				<key>Example</key>
+				<string>
+&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
+    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+&lt;/object&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>This tag is similar to the &lt;embed&gt; tag. It can be used to place external objects into a web page such as silverlight or flash components.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;ol&gt;</string>
+				<key>Description</key>
+				<string>Defines an ordered list of items</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    Below is a list of items, which the browser will display in numerical ordered list:
+
+    &lt;ol&gt;
+        &lt;li&gt;One&lt;/li&gt;
+        &lt;li&gt;Two&lt;/li&gt;
+        &lt;li&gt;Three&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>Used to define an ordered list of items. Used in conjunction with &lt;li&gt; element which define each item within the list. Items are displayed sequentially.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;optgroup&gt;</string>
+				<key>Description</key>
+				<string>Defines a group of related options in a &lt;select&gt; dropdown</string>
+				<key>Example</key>
+				<string>
+&lt;select&gt;
+    &lt;optgroup label=&quot;Bright Colors&quot;&gt;
+        &lt;option&gt;Yellow&lt;/option&gt;
+        &lt;option&gt;White&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label=&quot;Dark Colors&quot;&gt;
+        &lt;option&gt;Black&lt;/option&gt;
+        &lt;option&gt;Grey&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>A &lt;select&gt; can have any number of &lt;option&gt; children defining items in a dropdown. These &lt;option&gt; tags can be logically grouped together by the &lt;optgroup&gt; tag.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;option&gt;</string>
+				<key>Description</key>
+				<string>Defines an option in a drop-down list</string>
+				<key>Example</key>
+				<string>
+&lt;select&gt;
+    &lt;optgroup label=&quot;Bright Colors&quot;&gt;
+        &lt;option&gt;Yellow&lt;/option&gt;
+        &lt;option&gt;White&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label=&quot;Dark Colors&quot;&gt;
+        &lt;option&gt;Black&lt;/option&gt;
+        &lt;option&gt;Grey&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines an individual item within a dropdown list (see &lt;select&gt; element).</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;p&gt;</string>
+				<key>Description</key>
+				<string>Defines a paragraph</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+This is one line. &lt;br/&gt;
+This text will appear on the next line.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Use to define a section or paragraph within a document. When you use the p element to begin a new paragraph, it automatically creates some space around the content. This space is applied by the browser’s in-built style sheets, but you can override it as you see fit using CSS.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;param&gt;</string>
+				<key>Description</key>
+				<string>Defines a parameter for an object</string>
+				<key>Example</key>
+				<string>
+&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
+    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+&lt;/object&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;object&gt; tag accepts any number of &lt;param&gt; child elements which are used to pass a parameter into the object. For example, Silverlight objects can accept an &quot;initParams&quot; parameter which is passed to the Silverlight object as a startup parameter.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;pre&gt;</string>
+				<key>Description</key>
+				<string>Defines preformatted text</string>
+				<key>Example</key>
+				<string>
+&lt;pre&gt;
+This is some     text.
+Any line break or     extra    spaces will be kept
+&lt;/pre&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The browser displays text within the &lt;pre&gt; tag in a fix-width font and also keeps any line breaks or whitespace (normally this is ignored by the browser)</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;progress&gt;</string>
+				<key>Description</key>
+				<string>Represents the progress of a task</string>
+				<key>Example</key>
+				<string>
+&lt;progress value=&quot;33&quot; max=&quot;50&quot;&gt;&lt;/progress&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Represents the progress of a task. Can be updated dynamically via javascript.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;q&gt;</string>
+				<key>Description</key>
+				<string>Defines a short quotation</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+Mission Statement:
+&lt;q&gt;To provide a guide to HTML&lt;/q&gt;
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;q&gt; tag is used for short quotations - use &lt;blockquote&gt; for quotations longer than one sentence. The browser marks the text to show it as a quotation.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;samp&gt;</string>
+				<key>Description</key>
+				<string>Defines sample output from a computer program</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+Result of computation:
+&lt;samp&gt;Could not compute&lt;/samp&gt;
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>This tag is used to mark text as representing output from a computer program.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;script&gt;</string>
+				<key>Description</key>
+				<string>Defines a client-side script</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    alert(&apos;This is some script!&apos;);
+    &lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot; src=&quot;../common.js&quot;&gt;&lt;/script&gt;
+
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;script&gt; tag is usually placed as a child of the &lt;head&gt; element. In the &lt;script&gt; tag place javascript or similar code for use in the page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;section&gt;</string>
+				<key>Description</key>
+				<string>Defines a section in a document</string>
+				<key>Example</key>
+				<string>
+&lt;section&gt;
+    &lt;h1&gt;Analysis&lt;/h1&gt;
+    &lt;p&gt;The analyis of the samples yielded the following results...&lt;/p&gt;
+&lt;/section&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+This tag is used to define a section in a document - similar to how  Microsoft Word structures a document via heading sections. Each section is logically grouped together. This is different to a generic container such as the &lt;div&gt; tag.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;select&gt;</string>
+				<key>Description</key>
+				<string>Defines a drop-down list</string>
+				<key>Example</key>
+				<string>
+&lt;select&gt;
+    &lt;option value=&quot;blue&quot;&gt;Blue&lt;/option&gt;
+    &lt;option value=&quot;red&quot;&gt;Red&lt;/option&gt;
+    &lt;option value=&quot;green&quot;&gt;Green&lt;/option&gt;
+&lt;/select&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Use the &lt;select&gt; tag in combination with multiple &lt;option&gt; child element to create a drop-down list on the page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;small&gt;</string>
+				<key>Description</key>
+				<string>Defines smaller text</string>
+				<key>Example</key>
+				<string>&lt;small&gt;This text will appear quite small!&lt;/small&gt;</string>
+				<key>LongDescription</key>
+				<string>Simply displays text in a small font</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;source&gt;</string>
+				<key>Description</key>
+				<string>Defines media resources for &lt;audio&gt; and &lt;video&gt;</string>
+				<key>Example</key>
+				<string>
+&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    Your browser does not support the audio element, which is new to HTML5.
+&lt;/audio&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+          
+The &lt;source&gt; element allows you to specify alternate files that the browser may choose from depending on media type / codec.
+
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;span&gt;</string>
+				<key>Description</key>
+				<string>Defines a section in a document</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;There are many colors in a rainbow like &lt;span class=&quot;yellow&quot;&gt;yellow&lt;/span&gt; or &lt;span class=&quot;green&quot;&gt;green&lt;/span&gt; and many more...&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;span&gt; tag is used to group content in a document. Styles can be applied to the &lt;span&gt; element which will apply to all of it&apos;s content.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;strong&gt;</string>
+				<key>Description</key>
+				<string>Defines important text</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+The &lt;strong&gt;important&lt;/strong&gt; word has been bolded
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The browser marks text within the &lt;strong&gt; element as bolded text to emphasise it (similar to the &lt;b&gt; element)</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;style&gt;</string>
+				<key>Description</key>
+				<string>Defines style information directly in a document</string>
+				<key>Example</key>
+				<string>
+&lt;head&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    h1 {color:yellow}
+    p {font-weight:bold}
+    &lt;/style&gt;
+&lt;/head&gt;
+
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;style&gt; tag is used to apply styles directly in a document. Often instead of this, styles are defined in external .css files but sometimes it&apos;s useful to define styles directly - usually in the &lt;head&gt; element.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;sub&gt;</string>
+				<key>Description</key>
+				<string>Specifies subscripted text</string>
+				<key>Example</key>
+				<string>&lt;p&gt;Water is also know as &quot;H&lt;sub&gt;2&lt;/sub&gt;O&quot; &lt;/p&gt;</string>
+				<key>LongDescription</key>
+				<string>&lt;sub&gt; is used to insert subscripted text which is smaller and positioned lower for use in things like chemical or maths equations. E.g. H20 (i.e. water) where the &quot;2&quot; is position lower</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;sup&gt;</string>
+				<key>Description</key>
+				<string>Defines superscripted text</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+The value of 10&lt;sup&gt;2&lt;/sup&gt; = 100.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>&lt;sup&gt; is similar to &lt;sub&gt; element except the contained text is positioned smaller but higher - again for use in things like maths equations. E.g. 102 = 100 (10 to the power of 2 = 10 x 10 = 100)</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;table&gt;</string>
+				<key>Description</key>
+				<string>Defines a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used to define a table structure in a HTML document. Use in conjunction with other table tags such as &lt;tr&gt;, &lt;td&gt; to create rows and columns in the table.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;tbody&gt;</string>
+				<key>Description</key>
+				<string>Groups the body content in a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used with the &lt;tfoot&gt; and &lt;thead&gt; tags to establish different parts of a &lt;table&gt;. The advantage of using &lt;tbody&gt;,&lt;thead&gt; and &lt;tfoot&gt; is that it allows browsers to interpret the main &lt;tbody&gt; as the main content. For example, when scrolling, only the &lt;tbody&gt; area will scroll leaving the head and foot visible. Similarly when printing, the head and foot can be printed on each page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;td&gt;</string>
+				<key>Description</key>
+				<string>Defines a cell in a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used to define an individual table cell. Must be contained within a &lt;tr&gt; table-row element.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;textarea&gt;</string>
+				<key>Description</key>
+				<string>Defines a form text input with multiple lines</string>
+				<key>Example</key>
+				<string>
+&lt;form action=&quot;emailsubmit.aspx&quot;&gt;
+    Please enter email content below:
+    &lt;br /&gt;
+    &lt;textarea name=&quot;email&quot; cols=&quot;50&quot; rows=&quot;9&quot;&gt;Enter email content here.&lt;/textarea&gt;
+&lt;/form&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>&lt;textarea&gt; inserts a multi-line text input in the document. This control can accept more than one line of text as input making it useful for text inputs requiring a lot of data.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;tfoot&gt;</string>
+				<key>Description</key>
+				<string>Groups the footer content in a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Average&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1983&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;February&lt;/td&gt;
+            &lt;td&gt;1985&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used with the &lt;thead&gt; and &lt;tbody&gt; tags to establish different parts of a &lt;table&gt;. The advantage of using &lt;thead&gt; and &lt;tfoot&gt; is that it allows browsers to interpret the main &lt;tbody&gt; as the main content. For example, when scrolling, only the &lt;tbody&gt; area will scroll leaving the head and foot visible. Similarly when printing, the head and foot can be printed on each page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;th&gt;</string>
+				<key>Description</key>
+				<string>Defines a header cell in a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines a header cell in a &lt;table&gt;. Must be a child of a table row &lt;tr&gt; tag either within the main &lt;table&gt;, &lt;tbody&gt; or the header area &lt;thead&gt;. </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;thead&gt;</string>
+				<key>Description</key>
+				<string>Groups the header content in a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Used with the &lt;tfoot&gt; and &lt;tbody&gt; tags to establish different parts of a &lt;table&gt;. The advantage of using &lt;thead&gt; and &lt;tfoot&gt; is that it allows browsers to interpret the main &lt;tbody&gt; as the main content. For example, when scrolling, only the &lt;tbody&gt; area will scroll leaving the head and foot visible. Similarly when printing, the head and foot can be printed on each page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;title&gt;</string>
+				<key>Description</key>
+				<string>Defines a title for the document</string>
+				<key>Example</key>
+				<string>
+&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;title&gt;The HTML Title Tag&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        The content of the document about the title tag in HTML......
+    &lt;/body&gt;
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+The &lt;title&gt; element defines the title of a HTML document. When it is set, the title appears as the title in the browser toolbar, the page name added to favorites, and is also used in search engine results.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;tr&gt;</string>
+				<key>Description</key>
+				<string>Defines a row in a table</string>
+				<key>Example</key>
+				<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines a row in a &lt;table&gt;. Must consist of at least one &lt;th&gt; or &lt;td&gt; cell tags, depending on whether the row appears in a &lt;thead&gt; or &lt;tbody&gt; respectively.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;track&gt;</string>
+				<key>Description</key>
+				<string>Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements</string>
+				<key>Example</key>
+				<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    &lt;track src=&quot;subtitles_fr.vtt&quot; kind=&quot;subtitles&quot; srclang=&quot;fr&quot;
+    label=&quot;French&quot;&gt;
+    Your browser does not support the audio element, which is new to HTML5.
+&lt;/audio&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements. Currently does not have much browser support.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;ul&gt;</string>
+				<key>Description</key>
+				<string>Defines an unordered list of items </string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.&lt;br/&gt;
+    Below is a list of items, which the browser will display in a bulleted list:
+
+    &lt;ul&gt;
+       &lt;li&gt;Blue&lt;/li&gt;
+       &lt;li&gt;Red&lt;/li&gt;
+       &lt;li&gt;Green&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines an unordered list of items which will appear as bullet points in the document.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;var&gt;</string>
+				<key>Description</key>
+				<string>Defines a variable</string>
+				<key>Example</key>
+				<string>
+          &lt;p&gt;To disable any alarm on the premesis, just type the following on the keypad:
+&lt;kbd&gt;* 99 &lt;var&gt;alarmcode&lt;/var&gt; ##&lt;/kbd&gt;.&lt;/p&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>The browser will mark text in the &lt;var&gt; tag in a style that represents it as a variable.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;video&gt;</string>
+				<key>Description</key>
+				<string>Defines a video or movie</string>
+				<key>Example</key>
+				<string>&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+    &lt;source src=&quot;homemovie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    Sorry, the browser does not support the video tag.
+&lt;/video&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+        
+The &lt;video&gt; tag is new to HTML5 and provides the ability to embed video content without the need for a plugin like flash or silverlight.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;wbr&gt;</string>
+				<key>Description</key>
+				<string>Defines where it is ok to add a line break if necessary</string>
+				<key>Example</key>
+				<string>&lt;p&gt;
+The longest word in a movie ever is &lt;wbr&gt;Supercalifragilisticexpialidocious&lt;/wbr&gt;from Mary Poppins.
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+          
+The &lt;wbr&gt; tag specifies where in a text it would be ok to add a line-break if it was needed - for example in a very long word.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+		</array>
+		<key>Image</key>
+		<string>53-house.png</string>
+	</dict>
+	<key>Body</key>
+	<dict>
+		<key>Categories</key>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Categories</key>
+				<dict/>
+				<key>Commands</key>
+				<array>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;area&gt;</string>
+						<key>Description</key>
+						<string>Defines an area inside an image-map</string>
+						<key>Example</key>
+						<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+&lt;map name=&quot;rainbowmap&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+&lt;/map&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Defines an area within an image-map (see &lt;map&gt; tag). Each individual area within an image map can be used to direct the user to a different web page.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;article&gt;</string>
+						<key>Description</key>
+						<string>Defines an article (independent content)</string>
+						<key>Example</key>
+						<string>&lt;article&gt;
+    &lt;h1&gt;This is a story about html&lt;/h1&gt;
+    &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Html&quot;&gt;HTML on Wikipedia&lt;/a&gt;. HTML stands for Hyper-Text Markup Language. This article can describe lots of things about HTML.&lt;/p&gt;
+&lt;/article&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Used to mark a part of a page which could stand alone as independent content if linked by another web page - for example blog posts can be distributed for syndication.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;aside&gt;</string>
+						<key>Description</key>
+						<string>Defines content other than the main page content</string>
+						<key>Example</key>
+						<string>&lt;p&gt;The city of Boston is in New England&lt;/p&gt;
+&lt;aside&gt;
+    &lt;strong&gt;About Boston&lt;/strong&gt;
+    Boston is a city located in the state of New England. The Red Sox baseball team play at Fenway Park there.
+&lt;/aside&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Used to mark content in a page which is not necessarily part of the main subject of the article but is related to it. This tag should be used for information which can stand alone on its own.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;audio&gt;</string>
+						<key>Description</key>
+						<string>Defines sound content</string>
+						<key>Example</key>
+						<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    Your browser does not support the audio element, which is new to HTML5.
+&lt;/audio&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Defines audio / sound content for the page. Use this tag to link to an audio file (e.g. .wav) via the &quot;src&quot; attribute. Any content within the &lt;audio&gt; tag itself is only displayed if the browser does not support it.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;embed&gt;</string>
+						<key>Description</key>
+						<string>Defines an external application or plug-in </string>
+						<key>Example</key>
+						<string>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Short Movie&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;EMBED SRC=&quot;shortmovie.mov&quot;, WIDTH=150, HEIGHT=250 CONTROLS=TRUE&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+        
+This tag is re-introduced to HTML as part of HTML5. It has similar purpose to the &lt;object&gt; tag but is intended as a more cross-browser replacement, as &lt;object&gt; does not have full support in some browsers.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;figcaption&gt;</string>
+						<key>Description</key>
+						<string>Defines a caption for a &lt;figure&gt; element</string>
+						<key>Example</key>
+						<string>&lt;figure&gt;
+    &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
+    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
+    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+&lt;/figure&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Defines a caption for the &lt;figure&gt; element. Can be placed as either the first or the last child of the &lt;figure&gt; element.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;figure&gt;</string>
+						<key>Description</key>
+						<string>Defines self-contained content </string>
+						<key>Example</key>
+						<string>&lt;figure&gt;
+    &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
+    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
+    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+&lt;/figure&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						          
+Defines self-contained content such as images, diagrams etc.
+						
+While it is related to the main flow, its position is independent of the main flow.
+        					</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;img&gt;</string>
+						<key>Description</key>
+						<string>Defines an image</string>
+						<key>Example</key>
+						<string>&lt;img src=&quot;yellowsun.gif&quot; alt=&quot;sun&quot;/&gt;</string>
+						<key>LongDescription</key>
+						<string>Use this tag to embed an image into the document. Can be combined with the &lt;a&gt; tag to create an image link.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;link&gt;</string>
+						<key>Description</key>
+						<string>Defines the relationship between a document and an external resource (most used to link to style sheets)</string>
+						<key>Example</key>
+						<string>&lt;head&gt;
+    &lt;link href=&quot;../dojo/dojo/resources/dojo.css&quot; type=&quot;text/css&quot; rel=&quot;StyleSheet&quot; /&gt;
+    &lt;link href=&quot;../dojo/dijit/themes/dijit.css&quot; type=&quot;text/css&quot; rel=&quot;Stylesheet&quot; /&gt;
+&lt;/head&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;link&gt; tag can only be used within the &lt;head&gt; of a document. It is used to link to external resources such as CSS documents so they can be used in the page.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;map&gt;</string>
+						<key>Description</key>
+						<string>Defines a client-side image-map </string>
+						<key>Example</key>
+						<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+&lt;map name=&quot;rainbowmap&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+&lt;/map&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Defines an image-map which is a single image with multiple clickable areas, each leading the user to a different web page. </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;noscript&gt;</string>
+						<key>Description</key>
+						<string>Defines alternative content when a script cannot be run</string>
+						<key>Example</key>
+						<string>&lt;script src=&quot;../includes/common.js&quot;&gt;&lt;/script&gt;
+&lt;noscript&gt;
+The common javascript functions cannot be executed on this page - functionality will be affected.
+&lt;/noscript&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;noscript&gt; tag must be placed immediately after a &lt;script&gt; tag. If the &lt;script&gt; content cannot be executed, the content of the &lt;noscript&gt; tag will be shown instead.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;object&gt;</string>
+						<key>Description</key>
+						<string>Defines an embedded object or component</string>
+						<key>Example</key>
+						<string>&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
+    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+&lt;/object&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>This tag is similar to the &lt;embed&gt; tag. It can be used to place external objects into a web page such as silverlight or flash components.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;param&gt;</string>
+						<key>Description</key>
+						<string>Defines a parameter for an object</string>
+						<key>Example</key>
+						<string>&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
+    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+&lt;/object&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;object&gt; tag accepts any number of &lt;param&gt; child elements which are used to pass a parameter into the object. For example, Silverlight objects can accept an &quot;initParams&quot; parameter which is passed to the Silverlight object as a startup parameter.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;script&gt;</string>
+						<key>Description</key>
+						<string>Defines a client-side script</string>
+						<key>Example</key>
+						<string>
+&lt;p&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    alert(&apos;This is some script!&apos;);
+    &lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot; src=&quot;../common.js&quot;&gt;&lt;/script&gt;
+
+&lt;/p&gt;
+          					</string>
+						<key>LongDescription</key>
+						<string>The &lt;script&gt; tag is usually placed as a child of the &lt;head&gt; element. In the &lt;script&gt; tag place javascript or similar code for use in the page.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;source&gt;</string>
+						<key>Description</key>
+						<string>Defines media resources for &lt;audio&gt; and &lt;video&gt;</string>
+						<key>Example</key>
+						<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    Your browser does not support the audio element, which is new to HTML5.
+&lt;/audio&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+The &lt;source&gt; element allows you to specify alternate files that the browser may choose from depending on media type / codec.
+
+  </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;track&gt;</string>
+						<key>Description</key>
+						<string>Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements</string>
+						<key>Example</key>
+						<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    &lt;track src=&quot;subtitles_fr.vtt&quot; kind=&quot;subtitles&quot; srclang=&quot;fr&quot;
+    label=&quot;French&quot;&gt;
+    Your browser does not support the audio element, which is new to HTML5.
+&lt;/audio&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements. Currently does not have much browser support.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;video&gt;</string>
+						<key>Description</key>
+						<string>Defines a video or movie</string>
+						<key>Example</key>
+						<string>&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
+    &lt;source src=&quot;homemovie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    Sorry, the browser does not support the video tag.
+&lt;/video&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+The &lt;video&gt; tag is new to HTML5 and provides the ability to embed video content without the need for a plugin like flash or silverlight.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+				</array>
+				<key>Image</key>
+				<string>ContentTabIcon.png</string>
+			</dict>
+			<key>Layout</key>
+			<dict>
+				<key>Categories</key>
+				<dict/>
+				<key>Commands</key>
+				<array>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;body&gt;</string>
+						<key>Description</key>
+						<string>Defines the main body of the document</string>
+						<key>Example</key>
+						<string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    &lt;/body&gt;
+
+&lt;/html&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to define the main content of the HTML document. All content for display should be placed within this tag.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;br&gt;</string>
+						<key>Description</key>
+						<string>Defines a single line break</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    This is one line. &lt;br/&gt;
+    This text will appear on the next line.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to insert a line-break into the document. Subsequent content is displayed on the next line.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;canvas&gt;</string>
+						<key>Description</key>
+						<string>Used to draw graphics, on the fly, via scripting (usually JavaScript)</string>
+						<key>Example</key>
+						<string>&lt;script&gt;
+var canvas1 = document.getElementById(&apos;myCanvas&apos;);
+if(canvas1.getContext) {
+var context = canvas1.getContext(&apos;2d&apos;);
+context.fillRect(50,25,25,25);
+}
+&lt;/script&gt;
+
+&lt;canvas id=&quot;myCanvas&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+Your browser doesn&apos;t support canvas.
+&lt;/canvas&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+New tag in HTML5 which allows complex drawing via javascript code within its defined area. Note any content within the &lt;canvas&gt; tag itself is only displayed if the browser does not support it.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;div&gt;</string>
+						<key>Description</key>
+						<string>Defines a section in a document</string>
+						<key>Example</key>
+						<string>&lt;div style=&quot;color: red&quot;&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;ol&gt;
+        &lt;li&gt;One&lt;/li&gt;
+        &lt;li&gt;Two&lt;/li&gt;
+        &lt;li&gt;Three&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>
+The &lt;div&gt; tag is used to define a section in a HTML document. It is used to group together multiple HTML elements and can be used to apply styles to that group of elements via CSS.
+						
+In HTML5, it is now an element that defines generic containers within the content of a page. It is an element that is not meant to represent anything semantically.
+						
+In HTML5 you are encouraged to use more semantically relevant elements like &lt;section&gt; before you use the DIV elements.
+        </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;footer&gt;</string>
+						<key>Description</key>
+						<string>Defines a footer for a document</string>
+						<key>Example</key>
+						<string>
+&lt;html&gt;
+    &lt;body&gt;
+      &lt;article&gt;
+	&lt;p&gt;Interested in the latest tech developments?&lt;/p&gt;
+	&lt;p&gt;The best source of information is the World Wide Web&lt;/p&gt;
+      &lt;/article&gt;
+	&lt;footer&gt;
+	©  2011 Techie Industries
+	&lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+						</string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						        
+This tag is used to contain footer information such as author, contact or legal information  for its nearest semantic sectioned content parent element (e.g. its nearest parent &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;blockquote&gt;, &lt;body&gt;, &lt;details&gt;, &lt;fieldset&gt;, &lt;figure&gt;, &lt;td&gt; )
+</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;hgroup&gt;</string>
+						<key>Description</key>
+						<string>Groups a set of &lt;h1&gt; to &lt;h6&gt; elements </string>
+						<key>Example</key>
+						<string>&lt;hgroup&gt;
+    &lt;h1&gt;Main Title&lt;/h1&gt;
+    &lt;h2&gt;Sub Title&lt;/h2&gt;
+&lt;/hgroup&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						          
+Used to group a set of &lt;h1&gt;…&lt;h6&gt; elements.
+						
+When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will mask the lowest level all but the highest level heading in the group from the resulting document outline.
+        </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;hr&gt;</string>
+						<key>Description</key>
+						<string>Defines a thematic change in the content</string>
+						<key>Example</key>
+						<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+
+    &lt;hr/&gt;
+    &lt;p&gt;This is paragraph one.&lt;/p&gt;
+	&lt;hr width=&quot;80%&quot; height=&quot;5px&quot; &gt;
+    &lt;p&gt;This is paragraph two.&lt;/p&gt;
+    &lt;hr/&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>The &lt;hr&gt; tag is used to separate content in a document. It creates a horizontal rule across the document.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;html&gt;</string>
+						<key>Description</key>
+						<string>Defines the root of an HTML document</string>
+						<key>Example</key>
+						<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+	&lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>The &lt;html&gt; element is the root element of the HTML document and tells the browser that the document is a HTML document.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;iframe&gt;</string>
+						<key>Description</key>
+						<string>Defines an inline frame</string>
+						<key>Example</key>
+						<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+
+    &lt;iframe SRC=&quot;demo.html&quot; WIDTH=250 HEIGHT=200&gt;
+    &lt;/iframe&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>Use this tag to embed another HTML document within the current document.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;p&gt;</string>
+						<key>Description</key>
+						<string>Defines a paragraph</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    This is one line. &lt;br/&gt;
+    This text will appear on the next line.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Use to define a section or paragraph within a document. When you use the p element to begin a new paragraph, it automatically creates some space around the content. This space is applied by the browser’s in-built style sheets, but you can override it as you see fit using CSS.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;section&gt;</string>
+						<key>Description</key>
+						<string>Defines a section in a document</string>
+						<key>Example</key>
+						<string>&lt;section&gt;
+    &lt;h1&gt;Analysis&lt;/h1&gt;
+    &lt;p&gt;The analyis of the samples yielded the following results...&lt;/p&gt;
+&lt;/section&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+This tag is used to define a section in a document - similar to how  Microsoft Word structures a document via heading sections. Each section is logically grouped together. This is different to a generic container such as the &lt;div&gt; tag.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;span&gt;</string>
+						<key>Description</key>
+						<string>Defines a section in a document</string>
+						<key>Example</key>
+						<string>&lt;p&gt;There are many colors in a rainbow like &lt;span class=&quot;yellow&quot;&gt;yellow&lt;/span&gt; or &lt;span class=&quot;green&quot;&gt;green&lt;/span&gt; and many more...&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;span&gt; tag is used to group content in a document. Styles can be applied to the &lt;span&gt; element which will apply to all of it&apos;s content.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;wbr&gt;</string>
+						<key>Description</key>
+						<string>Defines where it is ok to add a line break if necessary</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    The longest word in a movie ever is &lt;wbr&gt;Supercalifragilisticexpialidocious&lt;/wbr&gt;from Mary Poppins.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+The &lt;wbr&gt; tag specifies where in a text it would be ok to add a line-break if it was needed - for example in a very long word.
+
+  </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+				</array>
+				<key>Image</key>
+				<string>LayoutTabIcon.png</string>
+			</dict>
+			<key>Style</key>
+			<dict>
+				<key>Categories</key>
+				<dict/>
+				<key>Commands</key>
+				<array>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;abbr&gt;</string>
+						<key>Description</key>
+						<string>Defines an abbreviation</string>
+						<key>Example</key>
+						<string>The &lt;abbr title=&quot;International Business Machines&quot;&gt;IBM&lt;/abbr&gt; company is a major computer company. </string>
+						<key>LongDescription</key>
+						<string>Used for indicating an abbreviation term. Use the &quot;title&quot; attribute to specify the expanded version of the term surrounded by this tag. Limited browser support for this tag.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;address&gt;</string>
+						<key>Description</key>
+						<string>Indicates the contact information of the document author</string>
+						<key>Example</key>
+						<string>&lt;address&gt;
+Author:&lt;br /&gt;
+&lt;a href=&quot;mailto:john.smith@xyz.com&quot;&gt;John Smith&lt;/address&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to indicate an address in relation to the author of the current HTML document. Not intended for use in displaying postal addresses.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;b&gt;</string>
+						<key>Description</key>
+						<string>Specifies bold content (text)</string>
+						<key>Example</key>
+						<string>This tag can be used to specify &lt;b&gt;bold&lt;/b&gt; text.</string>
+						<key>LongDescription</key>
+						<string>This tag can be used to specify bold text. Note however that there are often better ways (such as use of headings tags or css properties) to highlight text.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;bdo&gt;</string>
+						<key>Description</key>
+						<string>Overrides or changes the default text direction</string>
+						<key>Example</key>
+						<string>&lt;bdo dir=&quot;rtl&quot;&gt;
+    This text will read from right to left.
+&lt;/bdo&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to set the text direction for the content contained within the elements&apos; tags. For example this is useful if displaying content in languages that read from right-to-left.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;blockquote&gt;</string>
+						<key>Description</key>
+						<string>A document section quoted from another source</string>
+						<key>Example</key>
+						<string>&lt;p&gt;Here is a quote about HTML from wikipedia:&lt;/p&gt;
+
+&lt;blockquote cite=&quot;http://en.wikipedia.org/wiki/Html&quot;&gt;
+    HyperText Markup Language (HTML) is the main markup language for web pages. HTML elements are the basic building-blocks of webpages.
+&lt;/blockquote&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to display large quotations from a different source (usually more than one line). Browsers might render this content indented to highlight it.
+						
+Note this is different to the &lt;q&gt; tag used to display short quotations.
+        					</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;cite&gt;</string>
+						<key>Description</key>
+						<string>Defines the title of a work</string>
+						<key>Example</key>
+						<string>&lt;cite&gt;Dracula&lt;/cite&gt; by Bram Stoker. A classic book.</string>
+						<key>LongDescription</key>
+						<string>Defines text which represents the title of a work such as a book or a film. The browser will render this content appropriately such as using italics.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;code&gt;</string>
+						<key>Description</key>
+						<string>Defines a section of computer code</string>
+						<key>Example</key>
+						<string>Below is some C# .NET code:
+
+    &lt;code&gt;
+    int x = 10;
+    int y = 20;
+    int z = x + y;
+
+    MessageBox.Show(&quot;x + y = &quot; + z);
+&lt;/code&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Defines text which represents computer code. The browser will render this to indicate this (usually in a fixed font such as courier-new).</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;del&gt;</string>
+						<key>Description</key>
+						<string>Marks text that has been deleted from the document</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    The quick brown &lt;del&gt;cat&lt;/del&gt; &lt;ins&gt;fox&lt;/ins&gt; jumped over the lazy dog.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>
+    &lt;del&gt; tag is used to mark text that has been deleted from a HTML document (for change tracking). Browsers will generally show this text with a strike-through line through it. See also &lt;ins&gt; tag for marking inserted text.
+
+  </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;dfn&gt;</string>
+						<key>Description</key>
+						<string>Defines a definition term</string>
+						<key>Example</key>
+						<string>
+&lt;p&gt;
+    &lt;dfn&gt;Book&lt;/dfn&gt;: Something you read
+    &lt;dfn&gt;Television&lt;/dfn&gt;: Something you watch
+&lt;/p&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>The browser applies formatting to mark the text inside the &lt;dfn&gt; tag as a &quot;definition&quot; term. </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;em&gt;</string>
+						<key>Description</key>
+						<string>Defines emphasized text </string>
+						<key>Example</key>
+						<string>You really &lt;em&gt;must&lt;/em&gt; learn about HTML.</string>
+						<key>LongDescription</key>
+						<string>The browser applies formatting to mark the text inside the &lt;em&gt; tag as emphasised.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;h1&gt; to &lt;h6&gt;</string>
+						<key>Description</key>
+						<string>Defines HTML headings</string>
+						<key>Example</key>
+						<string>&lt;h1&gt;Main Title&lt;/h1&gt;</string>
+						<key>LongDescription</key>
+						<string>Use &lt;h1&gt; to &lt;h6&gt; to define different levels of subject headings in the document in descending order.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;header&gt;</string>
+						<key>Description</key>
+						<string>Used to display an introduction for a document</string>
+						<key>Example</key>
+						<string>&lt;header&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+&lt;/header&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Use this tag to display an introduction to the document or a group of navigational elements such as next/previous links etc.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;i&gt;</string>
+						<key>Description</key>
+						<string>Indicates emphasised text or expressions</string>
+						<key>Example</key>
+						<string>You &lt;i&gt;cannot&lt;/i&gt; be serious!</string>
+						<key>LongDescription</key>
+						<string>Use this tag to indicate emphasis on certain words in a paragraph.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;ins&gt;</string>
+						<key>Description</key>
+						<string>Marks text that has been inserted into the document</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    The quick brown &lt;del&gt;cat&lt;/del&gt; &lt;ins&gt;fox&lt;/ins&gt; jumped over the lazy dog.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>
+    &lt;ins&gt; tag is used to mark text that has been inserted into a HTML document (for change tracking). Browsers will generally show this text as underlined. See also &lt;del&gt; tag for marking deleted text.
+
+  </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;mark&gt;</string>
+						<key>Description</key>
+						<string>Specifies marked/highlighted text</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    This is the &lt;mark&gt;text which is of importance to the reader&lt;/mark&gt; and this is not.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>
+						The &lt;mark&gt; tag can be used to  highlight a portion of text from another source that was not necessarily highlighted by the original document author.
+						
+The browser will mark text within this tag in a special manner to highlight it to the reader.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;pre&gt;</string>
+						<key>Description</key>
+						<string>Defines preformatted text</string>
+						<key>Example</key>
+						<string>&lt;pre&gt;
+    This is some     text.
+    Any line break or     extra    spaces will be kept
+&lt;/pre&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The browser displays text within the &lt;pre&gt; tag in a fix-width font and also keeps any line breaks or whitespace (normally this is ignored by the browser)</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;progress&gt;</string>
+						<key>Description</key>
+						<string>Represents the progress of a task</string>
+						<key>Example</key>
+						<string>
+    &lt;progress value=&quot;33&quot; max=&quot;50&quot;&gt;&lt;/progress&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>New in HTML5.
+						
+Represents the progress of a task. Can be updated dynamically via javascript.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;q&gt;</string>
+						<key>Description</key>
+						<string>Defines a short quotation</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    Mission Statement:
+    &lt;q&gt;To provide a guide to HTML&lt;/q&gt;
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;q&gt; tag is used for short quotations - use &lt;blockquote&gt; for quotations longer than one sentence. The browser marks the text to show it as a quotation.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;samp&gt;</string>
+						<key>Description</key>
+						<string>Defines sample output from a computer program</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    Result of computation:
+    &lt;samp&gt;Could not compute&lt;/samp&gt;
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>This tag is used to mark text as representing output from a computer program.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;small&gt;</string>
+						<key>Description</key>
+						<string>Defines smaller text</string>
+						<key>Example</key>
+						<string>&lt;small&gt;This text will appear quite small!&lt;/small&gt;</string>
+						<key>LongDescription</key>
+						<string>Simply displays text in a small font</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;strong&gt;</string>
+						<key>Description</key>
+						<string>Defines important text</string>
+						<key>Example</key>
+						<string>&lt;p&gt;
+    The &lt;strong&gt;important&lt;/strong&gt; word has been bolded
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The browser marks text within the &lt;strong&gt; element as bolded text to emphasise it (similar to the &lt;b&gt; element)</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;style&gt;</string>
+						<key>Description</key>
+						<string>Defines style information directly in a document</string>
+						<key>Example</key>
+						<string>&lt;head&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        h1 {color:yellow}
+        p {font-weight:bold}
+    &lt;/style&gt;
+&lt;/head&gt;
+
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;style&gt; tag is used to apply styles directly in a document. Often instead of this, styles are defined in external .css files but sometimes it&apos;s useful to define styles directly - usually in the &lt;head&gt; element.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;sub&gt;</string>
+						<key>Description</key>
+						<string>Specifies subscripted text</string>
+						<key>Example</key>
+						<string>&lt;p&gt;Water is also know as &quot;H&lt;sub&gt;2&lt;/sub&gt;O&quot; &lt;/p&gt;</string>
+						<key>LongDescription</key>
+						<string>&lt;sub&gt; is used to insert subscripted text which is smaller and positioned lower for use in things like chemical or maths equations. E.g. H20 (i.e. water) where the &quot;2&quot; is position lower</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;sup&gt;</string>
+						<key>Description</key>
+						<string>Defines superscripted text</string>
+						<key>Example</key>
+						<string>
+&lt;p&gt;
+    The value of 10&lt;sup&gt;2&lt;/sup&gt; = 100.
+&lt;/p&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>&lt;sup&gt; is similar to &lt;sub&gt; element except the contained text is positioned smaller but higher - again for use in things like maths equations. E.g. 102 = 100 (10 to the power of 2 = 10 x 10 = 100)</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;var&gt;</string>
+						<key>Description</key>
+						<string>Defines a variable</string>
+						<key>Example</key>
+						<string>
+&lt;p&gt;To disable any alarm on the premesis, just type the following on the keypad:
+&lt;kbd&gt;* 99 &lt;var&gt;alarmcode&lt;/var&gt; ##&lt;/kbd&gt;.&lt;/p&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>The browser will mark text in the &lt;var&gt; tag in a style that represents it as a variable.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+				</array>
+				<key>Image</key>
+				<string>StyleTabIcon.png</string>
+			</dict>
+		</dict>
+		<key>Commands</key>
+		<array/>
+		<key>Image</key>
+		<string>97-puzzle-piece.png</string>
+	</dict>
+	<key>Forms</key>
+	<dict>
+		<key>Categories</key>
+		<dict/>
+		<key>Commands</key>
+		<array>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;a&gt;</string>
+				<key>Description</key>
+				<string>Defines a hyperlink</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+    &lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot;&gt;Launch Google in a new browser window!&lt;/a&gt;
+    &lt;br/&gt;
+    &lt;a href=&quot;#destination_name&quot;&gt;Destination&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    &lt;a name=&quot;destination_name&quot;&gt;&lt;/a&gt;
+&lt;/p&gt;
+        </string>
+				<key>LongDescription</key>
+				<string>
+Used to specify a hyperlink to another web page. Can specify the target window so that the link opens in the current window or a new one. Can be combined with &lt;img&gt; to display link as an image.
+
+Also, can be used for intra-document linking (linking to a specific location on the same page and to specific locations on another web page).
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;base&gt;</string>
+				<key>Description</key>
+				<string>Specifies the base URL for all links in document</string>
+				<key>Example</key>
+				<string>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;base href=&quot;http://www.xyz.com/images/&quot; target=&quot;_blank&quot; /&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;img src=&quot;image1.jpg&quot; width=&quot;50&quot; height=&quot;50&quot; alt=&quot;TestImage&quot; /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;base&gt; tag is used to specify a base URL for all links in the document (i.e.  &lt;a&gt; elements). This tag can only be specified once in the document and must be contained within the &lt;head&gt;.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;button&gt;</string>
+				<key>Description</key>
+				<string>Defines a clickable button</string>
+				<key>Example</key>
+				<string>The following button automatically gets input focus when the page loads: &lt;button type=&quot;button&quot; autofocus=&quot;autofocus&quot;&gt;This is a Button&lt;/button&gt;</string>
+				<key>LongDescription</key>
+				<string>Defines a simple button. Usually used within a &lt;form&gt; but can be used standalone also.
+				
+Inside a &lt;button&gt; element you can put content, like text or images. This is the difference between this element and buttons created with the &lt;input&gt; element.
+				
+The &quot;onclick&quot; attribute can be used to execute javascript code to take action when clicked.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;command&gt;</string>
+				<key>Description</key>
+				<string>Defines a command that can be invoked by the user</string>
+				<key>Example</key>
+				<string>&lt;menu&gt;
+    &lt;command type=&quot;command&quot; label=&quot;GO!&quot; onclick=&quot;submitRequest()&quot;&gt;GO&lt;/command&gt;
+&lt;/menu&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+				
+The &lt;command&gt; tag is used to define a particular command that can be shared by multiple controls on the interface (e.g. Radiobutton, checkbox, command button). This allows sharing of features such as enabled state between the linked controls.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;datalist&gt;</string>
+				<key>Description</key>
+				<string>Defines a list of predefined auto-complete options for a text input field.</string>
+				<key>Example</key>
+				<string>&lt;input list=&quot;countries&quot; /&gt;
+
+&lt;datalist id=&quot;countries&quot;&gt;
+    &lt;option value=&quot;Germany&quot;&gt;
+    &lt;option value=&quot;France&quot;&gt;
+    &lt;option value=&quot;Ireland&quot;&gt;
+    &lt;option value=&quot;Brazil&quot;&gt;
+    &lt;option value=&quot;Sweden&quot;&gt;
+&lt;/datalist&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+				
+The &lt;datalist&gt; tag is used to provide auto-complete options on an &lt;input&gt; field which has a &quot;list&quot; attribute defined on it (see example). </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;details&gt;</string>
+				<key>Description</key>
+				<string>Specifies extra details which the user can view or hide</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+	&lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+	This is where the main content of the document would go.
+
+	&lt;details&gt;
+	Copyright 2012 - HtmlCompany Ltd.
+	&lt;/details&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+				</string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+				          
+The &lt;details&gt; tag can be used to add any content to a page which is usually hidden by default by the browser but can be opened by the user to reveal the additional information.
+          			</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;fieldset&gt;</string>
+				<key>Description</key>
+				<string>Groups related elements in a form</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+    &lt;form action=&quot;result.jsp&quot;&gt;
+	Enter Colors:
+	&lt;fieldset&gt;
+	Color: &lt;input type=&quot;text&quot; /&gt;&lt;br /&gt;
+	Size: &lt;input type=&quot;text&quot; /&gt;&lt;br /&gt;
+	&lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/p&gt;
+          			</string>
+				<key>LongDescription</key>
+				<string>This tag is used to group related elements in a form. Browsers will draw a box around those elements to indicate their relationship.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;form&gt;</string>
+				<key>Description</key>
+				<string>Defines an HTML form for user input</string>
+				<key>Example</key>
+				<string>&lt;form method=&quot;post&quot; action=&quot;color.aspx&quot;&gt;
+First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;:&lt;br /&gt;
+Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;:&lt;br /&gt;
+Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;:&lt;br /&gt;
+&lt;/form&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>This tag defines a form for accepting user input. It can have any number of child elements for entering information such as: &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt;
+				
+There are a number of attributes that are used in form elements, however a form element should contain an action attribute. The action attribute points to a page or controller hosted by a server-side application which processes the form.
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;input&gt;</string>
+				<key>Description</key>
+				<string>Defines an input control</string>
+				<key>Example</key>
+				<string>&lt;form action=&quot;LibraryUsers.aspx&quot;&gt;
+First name: &lt;input type=&quot;text&quot; name=&quot;fname&quot; /&gt;&lt;br /&gt;
+Last name: &lt;input type=&quot;text&quot; name=&quot;lname&quot; /&gt;&lt;br /&gt;
+New User?: &lt;input type=&quot;checkbox&quot; name=&quot;new&quot; /&gt; &lt;br/&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/form&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Use this tag to create a control on a &lt;form&gt; to receive input from a user. The &quot;type&quot; attribute is used to define what kind of input will be received - see below:
+				
+Button: A clickable button
+Checkbox: A checkbox which is on or off
+File: An input field and a &quot;Browse...&quot; button, for file uploads
+Hidden: A hidden input field
+Image: An image as a submit button
+Password: A text input which shows only *** characters to the user
+Radio: A radio button
+Submit: A form submit button. Sends form data to the server.
+Text: A single-line text input field
+        </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;kbd&gt;</string>
+				<key>Description</key>
+				<string>Defines keyboard input</string>
+				<key>Example</key>
+				<string>
+&lt;p&gt;
+To start the program type &lt;kbd&gt;run start&lt;/kbd&gt; and press &lt;kbd&gt;enter&lt;/kbd&gt;
+&lt;/p&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The browser will mark text in the &lt;kbd&gt; tag in a style that represents it as keyboard input.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;label&gt;</string>
+				<key>Description</key>
+				<string>Defines a label for an input element</string>
+				<key>Example</key>
+				<string>&lt;label for=&quot;bnSubmit&quot;&gt;Submit Button&lt;/label&gt; &lt;input type=&quot;submit&quot; id=&quot;bnSubmit&quot; name=&quot;bnSumbit&quot; /&gt;</string>
+				<key>LongDescription</key>
+				<string>Associates some text information with a control on a form. This tag is useful for accessibility on a website as it describes a control&apos;s purpose to visually impared users.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;legend&gt;</string>
+				<key>Description</key>
+				<string>Defines a caption for a &lt;fieldset&gt;</string>
+				<key>Example</key>
+				<string>&lt;fieldset&gt;
+    &lt;legend&gt;Employee Data&lt;/legend&gt;
+    Name: &lt;input type=&quot;text&quot; name=&quot;empname&quot; /&gt;
+    Address: &lt;input type=&quot;text&quot; name=&quot;empaddress&quot; /&gt;
+    Title: &lt;input type=&quot;text&quot; name=&quot;jobtitle&quot; /&gt;
+&lt;/fieldset&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;legend&gt; tag is used to specify a caption for a fieldset (see &lt;fieldset&gt; tag). It must be added as the first child of the &lt;fieldset&gt; tag. The fieldset has a frame/border into which this caption will be inserted by the browser.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;nav&gt;</string>
+				<key>Description</key>
+				<string>Defines a set of navigation links</string>
+				<key>Example</key>
+				<string>
+&lt;nav&gt;
+    &lt;a href=&quot;../Colours.html&quot;&gt;Colours&lt;/a&gt;-
+    &lt;a href=&quot;../AllShapes.html&quot;&gt;Shapes&lt;/a&gt;-
+    &lt;a href=&quot;../LargeSizes.aspx&quot;&gt;Sizes&lt;/a&gt;
+&lt;/nav&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>New in HTML5.
+				
+Use the &lt;nav&gt; tag to group a collection of &lt;a&gt; hyperlinks. This can be useful for accessibility to help screen readers filter the important information.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;optgroup&gt;</string>
+				<key>Description</key>
+				<string>Defines a group of related options in a &lt;select&gt; dropdown</string>
+				<key>Example</key>
+				<string>
+&lt;select&gt;
+    &lt;optgroup label=&quot;Bright Colors&quot;&gt;
+        &lt;option&gt;Yellow&lt;/option&gt;
+        &lt;option&gt;White&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label=&quot;Dark Colors&quot;&gt;
+        &lt;option&gt;Black&lt;/option&gt;
+        &lt;option&gt;Grey&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>A &lt;select&gt; can have any number of &lt;option&gt; children defining items in a dropdown. These &lt;option&gt; tags can be logically grouped together by the &lt;optgroup&gt; tag.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;option&gt;</string>
+				<key>Description</key>
+				<string>Defines an option in a drop-down list</string>
+				<key>Example</key>
+				<string>
+&lt;select&gt;
+    &lt;optgroup label=&quot;Bright Colors&quot;&gt;
+        &lt;option&gt;Yellow&lt;/option&gt;
+        &lt;option&gt;White&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label=&quot;Dark Colors&quot;&gt;
+        &lt;option&gt;Black&lt;/option&gt;
+        &lt;option&gt;Grey&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Defines an individual item within a dropdown list (see &lt;select&gt; element).</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;select&gt;</string>
+				<key>Description</key>
+				<string>Defines a drop-down list</string>
+				<key>Example</key>
+				<string>
+&lt;select&gt;
+    &lt;option value=&quot;blue&quot;&gt;Blue&lt;/option&gt;
+    &lt;option value=&quot;red&quot;&gt;Red&lt;/option&gt;
+    &lt;option value=&quot;green&quot;&gt;Green&lt;/option&gt;
+&lt;/select&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>Use the &lt;select&gt; tag in combination with multiple &lt;option&gt; child element to create a drop-down list on the page.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;textarea&gt;</string>
+				<key>Description</key>
+				<string>Defines a form text input with multiple lines</string>
+				<key>Example</key>
+				<string>&lt;form action=&quot;emailsubmit.aspx&quot;&gt;
+    Please enter email content below:
+    &lt;br /&gt;
+    &lt;textarea name=&quot;email&quot; cols=&quot;50&quot; rows=&quot;9&quot;&gt;Enter email here.&lt;/textarea&gt;
+&lt;/form&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>&lt;textarea&gt; inserts a multi-line text input in the document. This control can accept more than one line of text as input making it useful for text inputs requiring a lot of data.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+		</array>
+		<key>Image</key>
+		<string>55-todo.png</string>
+	</dict>
+	<key>Metadata</key>
+	<dict>
+		<key>Categories</key>
+		<dict/>
+		<key>Commands</key>
+		<array>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;!--...--&gt;</string>
+				<key>Description</key>
+				<string>Defines a page comment</string>
+				<key>Example</key>
+				<string>&lt;!-- This is a comment describing the HTML below --&gt;</string>
+				<key>LongDescription</key>
+				<string>Comments are not visible in the page rendered by the browser. They are for benefit of developers mostly as source code notes. Can also be used to hide scripts from browsers who do not support them. </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;!DOCTYPE&gt; </string>
+				<key>Description</key>
+				<string>Defines the doc type</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;Doc Title&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+  This is where the main content of the document would go.
+  &lt;/body&gt;
+&lt;/html&gt;
+        			</string>
+				<key>LongDescription</key>
+				<string>The &lt;!DOCTYPE&gt; declaration should be added to all pages to instruct the browser which type of document (i.e. HTML) is being rendered.
+
+The &lt;!DOCTYPE&gt; declaration must be the very first element in your HTML document - before the &lt;html&gt; tag.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;head&gt;</string>
+				<key>Description</key>
+				<string>Defines header information on a document.</string>
+				<key>Example</key>
+				<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+       &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        			</string>
+				<key>LongDescription</key>
+				<string>The &lt;head&gt; element is the container for all meta-information elements in the document. This includes scripts, style sheets, meta-tags etc.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;meta&gt;</string>
+				<key>Description</key>
+				<string>Defines metadata about a HTML document</string>
+				<key>Example</key>
+				<string>
+&lt;head&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Joe Bloggs&quot; /&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;This page describes all the details about HTML and in particular HTML5 tags&quot; /&gt;
+    &lt;meta name=&quot;Keywords&quot; content=&quot;HTML, HTML5, tags, learning&quot; /&gt;
+&lt;/head&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>The &lt;meta&gt; tag is used to provide information about the HTML document. Examples include keywords which identify the document content/subject, description or author information.</string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+			<dict>
+				<key>CommandName</key>
+				<string>&lt;title&gt;</string>
+				<key>Description</key>
+				<string>Defines a title for the document</string>
+				<key>Example</key>
+				<string>
+&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;title&gt;The HTML Title Tag&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        The content of the document about the title tag in HTML......
+    &lt;/body&gt;
+&lt;/html&gt;
+          </string>
+				<key>LongDescription</key>
+				<string>
+The &lt;title&gt; element defines the title of a HTML document. When it is set, the title appears as the title in the browser toolbar, the page name added to favorites, and is also used in search engine results.
+          </string>
+				<key>Syntax</key>
+				<string> </string>
+			</dict>
+		</array>
+		<key>Image</key>
+		<string>42-info.png</string>
+	</dict>
+	<key>Table &amp; List</key>
+	<dict>
+		<key>Categories</key>
+		<dict>
+			<key>Lists</key>
+			<dict>
+				<key>Categories</key>
+				<dict/>
+				<key>Commands</key>
+				<array>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;dd&gt;</string>
+						<key>Description</key>
+						<string>Defines the description of a term in a definition list</string>
+						<key>Example</key>
+						<string>
+&lt;dl&gt;
+    &lt;dt&gt;Black&lt;/dt&gt;
+    &lt;dd&gt;A dark colour&lt;/dd&gt;
+    &lt;dt&gt;Yellow&lt;/dt&gt;
+    &lt;dd&gt;A bright colour&lt;/dd&gt;
+&lt;/dl&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;dl&gt;</string>
+						<key>Description</key>
+						<string>Defines a definition list</string>
+						<key>Example</key>
+						<string>
+&lt;dl&gt;
+    &lt;dt&gt;Black&lt;/dt&gt;
+    &lt;dd&gt;A dark colour&lt;/dd&gt;
+    &lt;dt&gt;Yellow&lt;/dt&gt;
+    &lt;dd&gt;A bright colour&lt;/dd&gt;
+&lt;/dl&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).
+						
+The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
+        </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;dt&gt;</string>
+						<key>Description</key>
+						<string>Defines an individual term in a definition list</string>
+						<key>Example</key>
+						<string>
+&lt;dl&gt;
+    &lt;dt&gt;Black&lt;/dt&gt;
+    &lt;dd&gt;A dark colour&lt;/dd&gt;
+    &lt;dt&gt;Yellow&lt;/dt&gt;
+    &lt;dd&gt;A bright colour&lt;/dd&gt;
+&lt;/dl&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).
+						
+The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
+        </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;li&gt;</string>
+						<key>Description</key>
+						<string>Defines an item within a list </string>
+						<key>Example</key>
+						<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    Below is a list of items, which the browser will display in numerical ordered list:
+
+    &lt;ol&gt;
+	&lt;li&gt;One&lt;/li&gt;
+	&lt;li&gt;Two&lt;/li&gt;
+	&lt;li&gt;Three&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+						</string>
+						<key>LongDescription</key>
+						<string>Used to define a single item in a list. The list could be of various types - e.g. Ordered (&lt;ol&gt;), Un-ordered (&lt;ul&gt;) etc.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;ol&gt;</string>
+						<key>Description</key>
+						<string>Defines an ordered list of items</string>
+						<key>Example</key>
+						<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.
+    Below is a list of items, which the browser will display in numerical ordered list:
+
+    &lt;ol&gt;
+	&lt;li&gt;One&lt;/li&gt;
+	&lt;li&gt;Two&lt;/li&gt;
+	&lt;li&gt;Three&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+        					</string>
+						<key>LongDescription</key>
+						<string>Used to define an ordered list of items. Used in conjunction with &lt;li&gt; element which define each item within the list. Items are displayed sequentially.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;ul&gt;</string>
+						<key>Description</key>
+						<string>Defines an unordered list of items </string>
+						<key>Example</key>
+						<string>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;body&gt;
+    This is where the main content of the document would go.&lt;br/&gt;
+    Below is a list of items, which the browser will display in a bulleted list:
+
+    &lt;ul&gt;
+       &lt;li&gt;Blue&lt;/li&gt;
+       &lt;li&gt;Red&lt;/li&gt;
+       &lt;li&gt;Green&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;/body&gt;
+
+&lt;/html&gt;
+          					</string>
+						<key>LongDescription</key>
+						<string>Defines an unordered list of items which will appear as bullet points in the document.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+				</array>
+				<key>Image</key>
+				<string>ListsTabIcon.png</string>
+			</dict>
+			<key>Table</key>
+			<dict>
+				<key>Categories</key>
+				<dict/>
+				<key>Commands</key>
+				<array>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;caption&gt;</string>
+						<key>Description</key>
+						<string>Defines a table&apos;s caption</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;caption&gt;Dates in the 1980&apos;s&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used with the &lt;table&gt; tag to define a caption which is displayed above the rendered table.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;col&gt;</string>
+						<key>Description</key>
+						<string>Specifies column properties for each column within a &lt;colgroup&gt; element </string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;0&quot;&gt;
+    &lt;colgroup&gt;
+        &lt;col style=&quot;background-color:green&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Day&lt;/th&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Defines an individual column or set of columns within a &lt;colgroup&gt; tag. Can set styles and other properties on that set of columns.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;colgroup&gt;</string>
+						<key>Description</key>
+						<string>Specifies a group of one or more columns in a table for formatting</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;0&quot;&gt;
+    &lt;colgroup&gt;
+        &lt;col style=&quot;background-color:green&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Day&lt;/th&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>The &lt;colgroup&gt; tag is used to specify a set of styles and properties on any number of columns which can be grouped together. See example.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;table&gt;</string>
+						<key>Description</key>
+						<string>Defines a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to define a table structure in a HTML document. Use in conjunction with other table tags such as &lt;tr&gt;, &lt;td&gt; to create rows and columns in the table.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;tbody&gt;</string>
+						<key>Description</key>
+						<string>Groups the body content in a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used with the &lt;tfoot&gt; and &lt;thead&gt; tags to establish different parts of a &lt;table&gt;. The advantage of using &lt;tbody&gt;,&lt;thead&gt; and &lt;tfoot&gt; is that it allows browsers to interpret the main &lt;tbody&gt; as the main content. For example, when scrolling, only the &lt;tbody&gt; area will scroll leaving the head and foot visible. Similarly when printing, the head and foot can be printed on each page.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;td&gt;</string>
+						<key>Description</key>
+						<string>Defines a cell in a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used to define an individual table cell. Must be contained within a &lt;tr&gt; table-row element.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;tfoot&gt;</string>
+						<key>Description</key>
+						<string>Groups the footer content in a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Average&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1983&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;February&lt;/td&gt;
+            &lt;td&gt;1985&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used with the &lt;thead&gt; and &lt;tbody&gt; tags to establish different parts of a &lt;table&gt;. The advantage of using &lt;thead&gt; and &lt;tfoot&gt; is that it allows browsers to interpret the main &lt;tbody&gt; as the main content. For example, when scrolling, only the &lt;tbody&gt; area will scroll leaving the head and foot visible. Similarly when printing, the head and foot can be printed on each page.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;th&gt;</string>
+						<key>Description</key>
+						<string>Defines a header cell in a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Defines a header cell in a &lt;table&gt;. Must be a child of a table row &lt;tr&gt; tag either within the main &lt;table&gt;, &lt;tbody&gt; or the header area &lt;thead&gt;. </string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;thead&gt;</string>
+						<key>Description</key>
+						<string>Groups the header content in a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Used with the &lt;tfoot&gt; and &lt;tbody&gt; tags to establish different parts of a &lt;table&gt;. The advantage of using &lt;thead&gt; and &lt;tfoot&gt; is that it allows browsers to interpret the main &lt;tbody&gt; as the main content. For example, when scrolling, only the &lt;tbody&gt; area will scroll leaving the head and foot visible. Similarly when printing, the head and foot can be printed on each page.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+					<dict>
+						<key>CommandName</key>
+						<string>&lt;tr&gt;</string>
+						<key>Description</key>
+						<string>Defines a row in a table</string>
+						<key>Example</key>
+						<string>
+&lt;table border=&quot;1&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Year&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;1984&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+  </string>
+						<key>LongDescription</key>
+						<string>Defines a row in a &lt;table&gt;. Must consist of at least one &lt;th&gt; or &lt;td&gt; cell tags, depending on whether the row appears in a &lt;thead&gt; or &lt;tbody&gt; respectively.</string>
+						<key>Syntax</key>
+						<string> </string>
+					</dict>
+				</array>
+				<key>Image</key>
+				<string>TableTabIcon.png</string>
+			</dict>
+		</dict>
+		<key>Commands</key>
+		<array/>
+		<key>Image</key>
+		<string>179-notepad.png</string>
+	</dict>
+</dict>
+</plist>
