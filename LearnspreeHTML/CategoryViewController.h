@@ -20,4 +20,6 @@
 @property (nonatomic,retain) NSArray *commandList;
 @property (nonatomic, retain) NSDictionary *categoryList;
 
+- (IBAction)showAboutLearnspree:(id)sender;
+
 @end

@@ -6,6 +6,7 @@
 //  Copyright 2011 learnspree.com. All rights reserved.
 //
 
+#import "AboutViewController.h"
 #import "CategoryViewController.h"
 #import "CommandDetailViewController.h"
 
@@ -33,6 +34,12 @@
 	UIImageView* imageView = [[UIImageView alloc] initWithImage:backgroundImage];
 	[[self tableView] setBackgroundView:imageView];
 	[imageView release];
+    
+    // set about page button
+    UIImage* aboutImage = [UIImage imageNamed:@"14-gear.png"];
+    UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithImage:aboutImage style:UIBarButtonItemStylePlain	 target:self action:@selector(showAboutLearnspree:)];          
+    self.navigationItem.rightBarButtonItem = aboutButton;
+    [aboutButton release];
 
 }
 
@@ -198,6 +205,22 @@
 	
     [super dealloc];
 }
+
+
+#pragma mark -
+#pragma mark Helper Methods
+
+// Show the about screen
+-(IBAction)showAboutLearnspree:(id)sender
+{
+    AboutViewController* aboutViewController = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+    
+    aboutViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:aboutViewController animated:YES completion:NULL];
+    
+    [aboutViewController release];
+}
+
 
 
 @end
