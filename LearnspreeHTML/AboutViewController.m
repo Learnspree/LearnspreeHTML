@@ -36,10 +36,16 @@
 {
     [super viewDidLoad];
     
+    // set background
+	UIImage* backgroundImage = [UIImage imageNamed:@"aboutscreenfabric.png"];
+	UIColor* imageBG = [[UIColor alloc] initWithPatternImage:backgroundImage];
+    self.view.backgroundColor = imageBG;
+	[imageBG release];
+    
     // set application name label
     NSString*	version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
-    NSString*   appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
-    NSString*   appDescription = [[NSString alloc] initWithFormat:@"%@ %@", appName, version];
+    //NSString*   appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+    NSString*   appDescription = [[NSString alloc] initWithFormat:@"Learnspree HTML5 v%@",  version];
     
     applicationNameLabel.Text = appDescription;
     
