@@ -33,6 +33,7 @@
 		86ACE04A14F2889900097BEE /* aboutscreenfabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 86ACE04814F2889800097BEE /* aboutscreenfabric.png */; };
 		86ACE04B14F2889900097BEE /* aboutscreenfabric@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86ACE04914F2889800097BEE /* aboutscreenfabric@2x.png */; };
 		86ACE04D14F28C1200097BEE /* LearnspreeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 86ACE04C14F28C1200097BEE /* LearnspreeLogo.png */; };
+		86ACE04F14F2970300097BEE /* fabric@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86ACE04E14F2970300097BEE /* fabric@2x.png */; };
 		86B0A8B714EEEA3200FECC23 /* 14-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B0A8B614EEEA3200FECC23 /* 14-gear.png */; };
 		86B0A8BA14EEEB4C00FECC23 /* 14-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B0A8B914EEEB4C00FECC23 /* 14-gear@2x.png */; };
 		86BD777414E6B14700AE1B7B /* ios_iconHTML5_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BD777214E6B14700AE1B7B /* ios_iconHTML5_57.png */; };
@@ -42,7 +43,6 @@
 		86D26A6914DB21C200A47CC3 /* CommandDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D26A6614DB21C200A47CC3 /* CommandDetailViewController.m */; };
 		86D26A6A14DB21C200A47CC3 /* CommandDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D26A6714DB21C200A47CC3 /* CommandDetailViewController.xib */; };
 		86D26A7614DB23A800A47CC3 /* fabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D26A7414DB23A800A47CC3 /* fabric.png */; };
-		86D26A7714DB23A800A47CC3 /* largeFabric.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D26A7514DB23A800A47CC3 /* largeFabric.png */; };
 		86D26A7A14DB241A00A47CC3 /* tableCellBackBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D26A7914DB241A00A47CC3 /* tableCellBackBlue.png */; };
 		86D26A7D14DB24EC00A47CC3 /* Commands.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D26A7B14DB24EC00A47CC3 /* Commands.plist */; };
 /* End PBXBuildFile section */
@@ -79,6 +79,7 @@
 		86ACE04814F2889800097BEE /* aboutscreenfabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutscreenfabric.png; sourceTree = "<group>"; };
 		86ACE04914F2889800097BEE /* aboutscreenfabric@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutscreenfabric@2x.png"; sourceTree = "<group>"; };
 		86ACE04C14F28C1200097BEE /* LearnspreeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LearnspreeLogo.png; sourceTree = "<group>"; };
+		86ACE04E14F2970300097BEE /* fabric@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fabric@2x.png"; sourceTree = "<group>"; };
 		86B0A8B614EEEA3200FECC23 /* 14-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-gear.png"; sourceTree = "<group>"; };
 		86B0A8B914EEEB4C00FECC23 /* 14-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-gear@2x.png"; sourceTree = "<group>"; };
 		86BD777214E6B14700AE1B7B /* ios_iconHTML5_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios_iconHTML5_57.png; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		86D26A6614DB21C200A47CC3 /* CommandDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandDetailViewController.m; sourceTree = "<group>"; };
 		86D26A6714DB21C200A47CC3 /* CommandDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommandDetailViewController.xib; sourceTree = "<group>"; };
 		86D26A7414DB23A800A47CC3 /* fabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fabric.png; sourceTree = "<group>"; };
-		86D26A7514DB23A800A47CC3 /* largeFabric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = largeFabric.png; sourceTree = "<group>"; };
 		86D26A7914DB241A00A47CC3 /* tableCellBackBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableCellBackBlue.png; sourceTree = "<group>"; };
 		86D26A7C14DB24EC00A47CC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Commands.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +171,7 @@
 		86A3D5E914D9DB4800AC627F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				86ACE04E14F2970300097BEE /* fabric@2x.png */,
 				86ACE04C14F28C1200097BEE /* LearnspreeLogo.png */,
 				86ACE04814F2889800097BEE /* aboutscreenfabric.png */,
 				86ACE04914F2889800097BEE /* aboutscreenfabric@2x.png */,
@@ -193,7 +194,6 @@
 				86A9DE8E14E1BC0A002295DF /* 97-puzzle-piece.png */,
 				86D26A7914DB241A00A47CC3 /* tableCellBackBlue.png */,
 				86D26A7414DB23A800A47CC3 /* fabric.png */,
-				86D26A7514DB23A800A47CC3 /* largeFabric.png */,
 				86A3D5EC14D9DC4B00AC627F /* Default@2x.png */,
 				86A3D5EA14D9DC2D00AC627F /* Default.png */,
 			);
@@ -256,7 +256,6 @@
 				86A3D5ED14D9DC4B00AC627F /* Default@2x.png in Resources */,
 				86D26A6A14DB21C200A47CC3 /* CommandDetailViewController.xib in Resources */,
 				86D26A7614DB23A800A47CC3 /* fabric.png in Resources */,
-				86D26A7714DB23A800A47CC3 /* largeFabric.png in Resources */,
 				86D26A7A14DB241A00A47CC3 /* tableCellBackBlue.png in Resources */,
 				86D26A7D14DB24EC00A47CC3 /* Commands.plist in Resources */,
 				86A9DE8F14E1BC0A002295DF /* 97-puzzle-piece.png in Resources */,
@@ -280,6 +279,7 @@
 				86ACE04A14F2889900097BEE /* aboutscreenfabric.png in Resources */,
 				86ACE04B14F2889900097BEE /* aboutscreenfabric@2x.png in Resources */,
 				86ACE04D14F28C1200097BEE /* LearnspreeLogo.png in Resources */,
+				86ACE04F14F2970300097BEE /* fabric@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

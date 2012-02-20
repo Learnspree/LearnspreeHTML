@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     
     // background view (image)
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"largeFabric.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fabric.png"]];
     
     // set up action for segment control
     [commandDisplaySegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
