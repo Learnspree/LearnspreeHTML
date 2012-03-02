@@ -1900,7 +1900,7 @@ The &lt;video&gt; tag is new to HTML5 and provides the ability to embed video co
 				<string>Defines where it is ok to add a line break if necessary</string>
 				<key>Example</key>
 				<string>&lt;p&gt;
-The longest word in a movie ever is &lt;wbr&gt;Supercalifragilisticexpialidocious&lt;/wbr&gt;from Mary Poppins.
+The longest word in a movie ever is Supercalifragilistic&lt;wbr/&gt;expialidocious from Mary Poppins.
 &lt;/p&gt;
           </string>
 				<key>LongDescription</key>
@@ -2515,7 +2515,7 @@ This tag is used to define a section in a document - similar to how  Microsoft W
 						<string>Defines where it is ok to add a line break if necessary</string>
 						<key>Example</key>
 						<string>&lt;p&gt;
-    The longest word in a movie ever is &lt;wbr&gt;Supercalifragilisticexpialidocious&lt;/wbr&gt;from Mary Poppins.
+    The longest word in a movie ever is Supercalifragilistic&lt;wbr/&gt;expialidocious from Mary Poppins.
 &lt;/p&gt;
   </string>
 						<key>LongDescription</key>

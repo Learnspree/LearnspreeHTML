@@ -11,6 +11,7 @@
 		8688A4ED14ED4D1D00949B40 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */; };
 		869FC84914EFE0DA00B30F9F /* 36-circle-west.png in Resources */ = {isa = PBXBuildFile; fileRef = 869FC84814EFE0DA00B30F9F /* 36-circle-west.png */; };
 		869FC84C14EFE0F100B30F9F /* 36-circle-west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 869FC84B14EFE0F100B30F9F /* 36-circle-west@2x.png */; };
+		86A199A114FBE8F400CC9DA4 /* FormatText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86A199A014FBE8F400CC9DA4 /* FormatText.plist */; };
 		86A3D5D014D9BC2C00AC627F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A3D5CF14D9BC2C00AC627F /* UIKit.framework */; };
 		86A3D5D214D9BC2C00AC627F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A3D5D114D9BC2C00AC627F /* Foundation.framework */; };
 		86A3D5D414D9BC2C00AC627F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A3D5D314D9BC2C00AC627F /* CoreGraphics.framework */; };
@@ -53,6 +54,7 @@
 		8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		869FC84814EFE0DA00B30F9F /* 36-circle-west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "36-circle-west.png"; sourceTree = "<group>"; };
 		869FC84B14EFE0F100B30F9F /* 36-circle-west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "36-circle-west@2x.png"; sourceTree = "<group>"; };
+		86A199A014FBE8F400CC9DA4 /* FormatText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FormatText.plist; sourceTree = "<group>"; };
 		86A3D5CB14D9BC2C00AC627F /* LearnspreeHTML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnspreeHTML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A3D5CF14D9BC2C00AC627F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86A3D5D114D9BC2C00AC627F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +166,7 @@
 				86A3D5D814D9BC2C00AC627F /* InfoPlist.strings */,
 				86A3D5DB14D9BC2C00AC627F /* LearnspreeHTML-Prefix.pch */,
 				86A3D5DC14D9BC2C00AC627F /* main.m */,
+				86A199A014FBE8F400CC9DA4 /* FormatText.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				86ACE04B14F2889900097BEE /* aboutscreenfabric@2x.png in Resources */,
 				86ACE04D14F28C1200097BEE /* LearnspreeLogo.png in Resources */,
 				86ACE04F14F2970300097BEE /* fabric@2x.png in Resources */,
+				86A199A114FBE8F400CC9DA4 /* FormatText.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,19 +11,21 @@
 
 @interface CommandDetailViewController : UIViewController {
 
-	UITextView *commandLongDescriptionLabel;
+    UIWebView *commandLongDescriptionView;
     UISegmentedControl *commandDisplaySegment;
 	
 	NSString *commandName;
+    NSString *previousCommandName;
 	NSString *commandDescription;
 	NSString *commandSyntax;
 	NSString *commandLongDescription;
     NSString *commandExample;
 }
 
-@property (nonatomic, retain) IBOutlet UITextView *commandLongDescriptionLabel;
+@property (nonatomic, retain) IBOutlet UIWebView *commandLongDescriptionView;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *commandDisplaySegment;
 
+@property (nonatomic, retain) NSString *previousCommandName;
 @property (nonatomic, retain) NSString *commandName;
 @property (nonatomic, retain) NSString *commandDescription;
 @property (nonatomic, retain) NSString *commandSyntax;
