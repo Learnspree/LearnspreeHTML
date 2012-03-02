@@ -509,7 +509,7 @@ The &lt;datalist&gt; tag is used to provide auto-complete options on an &lt;inpu
 				<key>LongDescription</key>
 				<string>The &lt;dl&gt; tag is used to create a &quot;definition&quot; list. It is used in conjunction with the &lt;dt&gt; and &lt;dd&gt; tags to create list items which display a term (&lt;dt&gt;) and its definition (&lt;dd&gt;).
 
-          The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
+The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the definitions) are indented. This creates an effect where the &lt;dt&gt; (i.e. the term) is highlighted to the reader.
         </string>
 				<key>Syntax</key>
 				<string> </string>

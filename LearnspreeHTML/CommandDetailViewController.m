@@ -46,12 +46,6 @@
     [commandDisplaySegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
 }
 
-// respond to rotation by resetting content
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    [self displayCommandDetail:[commandDisplaySegment selectedSegmentIndex]];
-}
-
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -243,7 +237,7 @@
     
     // set final html for webview
     NSString* webViewContent = [[NSString alloc] initWithFormat:@"%@%@%@%@%@%@%@%@%@", 
-                                @"<html><head><style type=""text/css""> div.formatted { background-color:transparent; color: white;width:100%;overflow:hidden;font-family:", 
+                                @"<html><head><meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'><style type=""text/css""> div.formatted { background-color:transparent; color: white;width:100%;overflow:hidden;font-family:", 
                                 fontFamily, 
                                 @";font-size:",
                                 fontSize,
