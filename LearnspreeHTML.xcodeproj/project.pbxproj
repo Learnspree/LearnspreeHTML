@@ -40,6 +40,7 @@
 		86BD777414E6B14700AE1B7B /* ios_iconHTML5_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BD777214E6B14700AE1B7B /* ios_iconHTML5_57.png */; };
 		86BD777514E6B14700AE1B7B /* ios_iconHTML5_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BD777314E6B14700AE1B7B /* ios_iconHTML5_114.png */; };
 		86BD777814E6B2B800AE1B7B /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 86BD777714E6B2B800AE1B7B /* iTunesArtwork */; };
+		86C8BB8215011BC10000C944 /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86C8BB8115011BC10000C944 /* libFlurryAnalytics.a */; };
 		86D26A6814DB21C200A47CC3 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D26A6414DB21C200A47CC3 /* CategoryViewController.m */; };
 		86D26A6914DB21C200A47CC3 /* CommandDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D26A6614DB21C200A47CC3 /* CommandDetailViewController.m */; };
 		86D26A6A14DB21C200A47CC3 /* CommandDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D26A6714DB21C200A47CC3 /* CommandDetailViewController.xib */; };
@@ -87,6 +88,8 @@
 		86BD777214E6B14700AE1B7B /* ios_iconHTML5_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios_iconHTML5_57.png; sourceTree = "<group>"; };
 		86BD777314E6B14700AE1B7B /* ios_iconHTML5_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios_iconHTML5_114.png; sourceTree = "<group>"; };
 		86BD777714E6B2B800AE1B7B /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		86C8BB8015011BC10000C944 /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
+		86C8BB8115011BC10000C944 /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
 		86D26A6314DB21C200A47CC3 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		86D26A6414DB21C200A47CC3 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		86D26A6514DB21C200A47CC3 /* CommandDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandDetailViewController.h; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 				86A3D5D014D9BC2C00AC627F /* UIKit.framework in Frameworks */,
 				86A3D5D214D9BC2C00AC627F /* Foundation.framework in Frameworks */,
 				86A3D5D414D9BC2C00AC627F /* CoreGraphics.framework in Frameworks */,
+				86C8BB8215011BC10000C944 /* libFlurryAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,7 @@
 		86A3D5D514D9BC2C00AC627F /* LearnspreeHTML */ = {
 			isa = PBXGroup;
 			children = (
+				86C8BB7F15011BC10000C944 /* FlurryAnalytics */,
 				86D26A6314DB21C200A47CC3 /* CategoryViewController.h */,
 				86D26A6414DB21C200A47CC3 /* CategoryViewController.m */,
 				86D26A6514DB21C200A47CC3 /* CommandDetailViewController.h */,
@@ -201,6 +206,15 @@
 				86A3D5EA14D9DC2D00AC627F /* Default.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		86C8BB7F15011BC10000C944 /* FlurryAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				86C8BB8015011BC10000C944 /* FlurryAnalytics.h */,
+				86C8BB8115011BC10000C944 /* libFlurryAnalytics.a */,
+			);
+			path = FlurryAnalytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +372,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "LearnspreeHTML/LearnspreeHTML-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LearnspreeHTML/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -408,6 +426,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "LearnspreeHTML/LearnspreeHTML-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LearnspreeHTML/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -424,6 +446,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "LearnspreeHTML/LearnspreeHTML-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LearnspreeHTML/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = NO;

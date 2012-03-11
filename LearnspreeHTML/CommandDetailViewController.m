@@ -7,6 +7,8 @@
 //
 
 #import "CommandDetailViewController.h"
+#import "FlurryAnalytics.h"
+
 
 // private helper methods
 @interface CommandDetailViewController (PrivateMethods)
@@ -115,15 +117,25 @@
 
 // method to display the appropriate information depending on the currently selected command segment
 - (void)displayCommandDetail:(int)selectedSegmentIndex {
+    
+    // flurry analytics data
+    NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                      [self commandName], @"Command",
+                                      nil];
+    
+    // show the correct command details according to selected segment
     switch(selectedSegmentIndex) {
         case 0:  
             [self displayFormattedText:commandLongDescription];
+            [FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
             break; 
         case 1:  
             [self displayFormattedText:commandExample];
+            [FlurryAnalytics logEvent:@"VIEW EXAMPLE" withParameters:flurryDictionary];
             break; 
         case 2:
             [self displayFormattedText:commandSyntax];
+            [FlurryAnalytics logEvent:@"VIEW SYNTAX" withParameters:flurryDictionary];
             break;
         default: 
             break;
@@ -202,12 +214,14 @@
                     // close <span> 
                     NSString *closeReplaceString = [[NSString alloc] initWithFormat:@"%C</span>",currentChar];
                     [finalHtml appendString:closeReplaceString];
+                    [closeReplaceString release];
                 }
                 else
                 {
                     // replace with specified replacement string
                     NSString *replaceString = [[NSString alloc] initWithString:[formatDict valueForKey:currentCharAsString]];
                     [finalHtml appendString:replaceString];
+                    [replaceString release];
                     
                     // save current active format char
                     activeFormatChar = currentChar;
@@ -249,6 +263,9 @@
     
     
     [self.commandLongDescriptionView loadHTMLString:webViewContent baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+    
+    // release resources
+    [formatDict release];
 }
 
 

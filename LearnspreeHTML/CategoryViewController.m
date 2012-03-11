@@ -9,7 +9,7 @@
 #import "AboutViewController.h"
 #import "CategoryViewController.h"
 #import "CommandDetailViewController.h"
-
+#import "FlurryAnalytics.h"
 
 @implementation CategoryViewController
 
@@ -153,8 +153,12 @@
         childController.commandSyntax = [selectedCommand valueForKey:@"Syntax"];  
         childController.commandExample = [[selectedCommand valueForKey:@"Example"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
+        // log flurry event
+        [FlurryAnalytics logEvent:childController.commandName]; 
+        
         // display the command view
         [self.navigationController pushViewController:childController animated:YES];
+        
     }
     
 	
