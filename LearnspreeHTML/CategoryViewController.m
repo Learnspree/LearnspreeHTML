@@ -153,8 +153,13 @@
         childController.commandSyntax = [selectedCommand valueForKey:@"Syntax"];  
         childController.commandExample = [[selectedCommand valueForKey:@"Example"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
-        // log flurry event
+        // log flurry events
         [FlurryAnalytics logEvent:childController.commandName]; 
+        NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                                 childController.commandName, @"Command",
+                                                 nil];
+        [FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
+        
         
         // display the command view
         [self.navigationController pushViewController:childController animated:YES];
