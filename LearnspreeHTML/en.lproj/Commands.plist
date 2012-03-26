@@ -14,7 +14,19 @@
 				<key>Description</key>
 				<string>Defines a page comment</string>
 				<key>Example</key>
-				<string>&lt;!-- This is a comment describing the HTML below --&gt;</string>
+				<string>&lt;!-- This is a comment describing the HTML below --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;!-- This is a comment about the BODY --&gt;
+    This is the main body of the document
+    &lt;/body&gt;
+
+&lt;/html&gt;</string>
 				<key>LongDescription</key>
 				<string>Comments are not visible in the page rendered by the browser. They are for benefit of developers mostly as source code notes. Can also be used to hide scripts from browsers who do not support them. </string>
 				<key>Syntax</key>
@@ -104,12 +116,16 @@ Author:&lt;br /&gt;
 				<key>Description</key>
 				<string>Defines an area inside an image-map</string>
 				<key>Example</key>
-				<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
-    &lt;map name=&quot;rainbowmap&quot;&gt;
-        &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
-        &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
-        &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
-    &lt;/map&gt;
+				<string>&lt;p&gt;
+Click on areas in the image below to go to different pages.
+&lt;/p&gt;
+&lt;img src=&quot;rainbow.png&quot; width=&quot;250&quot; height=&quot;300&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+                    
+&lt;map name=&quot;rainbowmap&quot;&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;0,0,250,100&quot; alt=&quot;Yellow&quot; href=&quot;yellowPage.html&quot; /&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;0,100,250,200&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;0,200,250,300&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+&lt;/map&gt;
           </string>
 				<key>LongDescription</key>
 				<string>Defines an area within an image-map (see &lt;map&gt; tag). Each individual area within an image map can be used to direct the user to a different web page.</string>
@@ -159,8 +175,11 @@ Used to mark content in a page which is not necessarily part of the main subject
 				<key>Description</key>
 				<string>Defines sound content</string>
 				<key>Example</key>
-				<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
-    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+				<string>&lt;p&gt;
+Use the controls below to play some audio:
+&lt;/p&gt;
+&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;track1.wav&quot; type=&quot;audio/wav&quot; /&gt;
     Your browser does not support the audio element, which is new to HTML5.
 &lt;/audio&gt;
           </string>
@@ -204,6 +223,8 @@ Defines audio / sound content for the page. Use this tag to link to an audio fil
 				<string>The &lt;base&gt; tag is used to specify a base URL for all links in the document (i.e.  &lt;a&gt; elements). This tag can only be specified once in the document and must be contained within the &lt;head&gt;.</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -306,18 +327,23 @@ The &quot;onclick&quot; attribute can be used to execute javascript code to take
 				<key>Description</key>
 				<string>Used to draw graphics, on the fly, via scripting (usually JavaScript)</string>
 				<key>Example</key>
-				<string>
-&lt;script&gt;
-    var canvas1 = document.getElementById(&apos;myCanvas&apos;);
-    if(canvas1.getContext) {
-    var context = canvas1.getContext(&apos;2d&apos;);
-    context.fillRect(50,25,25,25);}
-&lt;/script&gt;
+				<string>&lt;p&gt;You should see 3 squares below:&lt;/p&gt;
 
-&lt;canvas id=&quot;myCanvas&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
-    Your browser doesn&apos;t support canvas.
+&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
+Your browser doesn&apos;t support canvas.
 &lt;/canvas&gt;
-          </string>
+
+&lt;script&gt;
+var canvas1 = document.getElementById(&apos;myCanvas&apos;);
+if (canvas1.getContext) {
+var context = canvas1.getContext(&apos;2d&apos;);
+context.strokeStyle = &quot;#2E94DE&quot;;
+context.strokeRect(10, 10, 75, 75);
+context.strokeRect(25, 25, 100, 100);
+context.strokeStyle = &quot;#FF0000&quot;;
+context.strokeRect(95, 95, 55, 55);
+}
+&lt;/script&gt;          </string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
         
@@ -396,7 +422,7 @@ MessageBox.Show(&quot;x + y = &quot; + z);
 				<string>&lt;table border=&quot;0&quot;&gt;
     &lt;colgroup&gt;
         &lt;col style=&quot;background-color:green&quot; /&gt;
-        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;background-color:red&quot; /&gt;
     &lt;/colgroup&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -428,7 +454,7 @@ MessageBox.Show(&quot;x + y = &quot; + z);
 				<string>&lt;table border=&quot;0&quot;&gt;
     &lt;colgroup&gt;
         &lt;col style=&quot;background-color:green&quot; /&gt;
-        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;background-color:red&quot; /&gt;
     &lt;/colgroup&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -465,9 +491,13 @@ MessageBox.Show(&quot;x + y = &quot; + z);
 				<key>LongDescription</key>
 				<string>New in HTML5.
         
-The &lt;command&gt; tag is used to define a particular command that can be shared by multiple controls on the interface (e.g. Radiobutton, checkbox, command button). This allows sharing of features such as enabled state between the linked controls.</string>
+The &lt;command&gt; tag is used to define a particular command that can be shared by multiple controls on the interface (e.g. Radiobutton, checkbox, command button). This allows sharing of features such as enabled state between the linked controls.
+                
+Currently the &lt;command&gt; tag has limited browser support.</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -475,7 +505,11 @@ The &lt;command&gt; tag is used to define a particular command that can be share
 				<key>Description</key>
 				<string>Defines a list of predefined auto-complete options for a text input field.</string>
 				<key>Example</key>
-				<string>
+				<string>&lt;p&gt;When the mobile safari browser supports the datalist tag, this demo will autocomplete text which matches
+the list of options in the datalist. &lt;br /&gt;
+Until then, try the example in Firefox or Opera and it will work. 
+&lt;/p&gt;
+                    
 &lt;input list=&quot;countries&quot; /&gt;
 
 &lt;datalist id=&quot;countries&quot;&gt;
@@ -558,9 +592,13 @@ The quick brown &lt;del&gt;cat&lt;/del&gt; &lt;ins&gt;fox&lt;/ins&gt; jumped ove
 New in HTML5.
           
 The &lt;details&gt; tag can be used to add any content to a page which is usually hidden by default by the browser but can be opened by the user to reveal the additional information.
+                    
+Currently the &lt;details&gt; tag has limited browser support.
           </string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -571,11 +609,14 @@ The &lt;details&gt; tag can be used to add any content to a page which is usuall
 				<string>
 &lt;p&gt;
     &lt;dfn&gt;Book&lt;/dfn&gt;: Something you read
+&lt;br/&gt;
     &lt;dfn&gt;Television&lt;/dfn&gt;: Something you watch
 &lt;/p&gt;
         </string>
 				<key>LongDescription</key>
-				<string>The browser applies formatting to mark the text inside the &lt;dfn&gt; tag as a &quot;definition&quot; term. </string>
+				<string>The browser applies formatting to mark the text inside the &lt;dfn&gt; tag as a &quot;definition&quot; term.
+In most browsers (e.g. Firefox, Opera), the text inside the &lt;dfn&gt; element will be in an italic font, except for WebKit browsers such as Chrome and Safari which display it in an upright font.                
+</string>
 				<key>Syntax</key>
 				<string> </string>
 			</dict>
@@ -588,6 +629,8 @@ The &lt;details&gt; tag can be used to add any content to a page which is usuall
 				<string>
 &lt;div style=&quot;color: red&quot;&gt;
     &lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div style=&quot;color: green&quot;&gt;
     &lt;ol&gt;
         &lt;li&gt;One&lt;/li&gt;
         &lt;li&gt;Two&lt;/li&gt;
@@ -671,10 +714,10 @@ The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the
 				<string>
 &lt;html&gt;
     &lt;head&gt;
-        &lt;title&gt;Short Movie&lt;/title&gt;
+        &lt;title&gt;Learnspree&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;EMBED SRC=&quot;shortmovie.mov&quot;, WIDTH=150, HEIGHT=250 CONTROLS=TRUE&gt;
+        &lt;EMBED SRC=&quot;CLOCK.MOV&quot; WIDTH=300 HEIGHT=200 /&gt;
     &lt;/body&gt;
 &lt;/html&gt;
         </string>
@@ -716,8 +759,8 @@ This tag is re-introduced to HTML as part of HTML5. It has similar purpose to th
 				<string>
 &lt;figure&gt;
     &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
-    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
-    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+    &lt;img src=&quot;europeanMap.png&quot; alt=&quot;Europe&quot;
+    width=&quot;300&quot; height=&quot;300&quot; /&gt;
 &lt;/figure&gt;
           </string>
 				<key>LongDescription</key>
@@ -736,8 +779,8 @@ Defines a caption for the &lt;figure&gt; element. Can be placed as either the fi
 				<string>
 &lt;figure&gt;
     &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
-    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
-    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+    &lt;img src=&quot;europeanMap.png&quot; alt=&quot;Europe&quot;
+    width=&quot;300&quot; height=&quot;300&quot; /&gt;
 &lt;/figure&gt;
           </string>
 				<key>LongDescription</key>
@@ -783,9 +826,9 @@ This tag is used to contain footer information such as author, contact or legal 
 				<string>Defines an HTML form for user input</string>
 				<key>Example</key>
 				<string>&lt;form method=&quot;post&quot; action=&quot;color.aspx&quot;&gt;
-    First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;:&lt;br /&gt;
-    Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;:&lt;br /&gt;
-    Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;:&lt;br /&gt;
+    First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;&lt;br /&gt;
+    Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;&lt;br /&gt;
+    Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;&lt;br /&gt;
 &lt;/form&gt;
           </string>
 				<key>LongDescription</key>
@@ -802,7 +845,12 @@ There are a number of attributes that are used in form elements, however a form 
 				<key>Description</key>
 				<string>Defines HTML headings</string>
 				<key>Example</key>
-				<string>&lt;h1&gt;Main Title&lt;/h1&gt;</string>
+				<string>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</string>
 				<key>LongDescription</key>
 				<string>Use &lt;h1&gt; to &lt;h6&gt; to define different levels of subject headings in the document in descending order.</string>
 				<key>Syntax</key>
@@ -842,6 +890,9 @@ There are a number of attributes that are used in form elements, however a form 
 &lt;header&gt;
     &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
 &lt;/header&gt;
+&lt;p&gt;
+This is the rest of the document…
+&lt;/p&gt;
           </string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
@@ -861,13 +912,14 @@ Use this tag to display an introduction to the document or a group of navigation
     &lt;h1&gt;Main Title&lt;/h1&gt;
     &lt;h2&gt;Sub Title&lt;/h2&gt;
 &lt;/hgroup&gt;
+&lt;p&gt;
+This is the rest of the document…
+&lt;/p&gt;
           </string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
           
 Used to group a set of &lt;h1&gt;…&lt;h6&gt; elements.
-
-When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will mask the lowest level all but the highest level heading in the group from the resulting document outline.
         </string>
 				<key>Syntax</key>
 				<string> </string>
@@ -947,9 +999,15 @@ When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will 
 &lt;html&gt;
 
     &lt;body&gt;
+    
     This is where the main content of the document would go.
+    &lt;br/&gt;
+    This is some text.
+    &lt;br/&gt;
+    Below is an iframe containing the local page &quot;yellowPage.html&quot;.
+    &lt;br/&gt;
 
-    &lt;iframe SRC=&quot;demo.html&quot; WIDTH=250 HEIGHT=200&gt;
+    &lt;iframe SRC=&quot;yellowPage.html&quot; WIDTH=250 HEIGHT=200&gt;
     &lt;/iframe&gt;
 
     &lt;/body&gt;
@@ -967,7 +1025,16 @@ When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will 
 				<key>Description</key>
 				<string>Defines an image</string>
 				<key>Example</key>
-				<string>&lt;img src=&quot;yellowsun.gif&quot; alt=&quot;sun&quot;/&gt;</string>
+				<string>&lt;p&gt;
+    Below is a simple image of a rainbow:
+    &lt;img src=&quot;rainbow.png&quot; alt=&quot;rainbow&quot; style=&quot;width: 300px; height: 100px&quot;/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    Below is an example of an image link - click it:
+    &lt;a href=&quot;yellowPage.html&quot;&gt;
+        &lt;img src=&quot;yellowLink.png&quot; alt=&quot;yellow&quot;/&gt;
+    &lt;/a&gt;
+&lt;/p&gt;</string>
 				<key>LongDescription</key>
 				<string>Use this tag to embed an image into the document. Can be combined with the &lt;a&gt; tag to create an image link.</string>
 				<key>Syntax</key>
@@ -1059,9 +1126,9 @@ To start the program type &lt;kbd&gt;run start&lt;/kbd&gt; and press &lt;kbd&gt;
 				<string>
 &lt;fieldset&gt;
     &lt;legend&gt;Employee Data&lt;/legend&gt;
-    Name: &lt;input type=&quot;text&quot; name=&quot;empname&quot; /&gt;
-    Address: &lt;input type=&quot;text&quot; name=&quot;empaddress&quot; /&gt;
-    Title: &lt;input type=&quot;text&quot; name=&quot;jobtitle&quot; /&gt;
+    Name: &lt;input type=&quot;text&quot; name=&quot;empname&quot; /&gt;&lt;br/&gt;
+    Address: &lt;input type=&quot;text&quot; name=&quot;empaddress&quot; /&gt;&lt;br/&gt;
+    Title: &lt;input type=&quot;text&quot; name=&quot;jobtitle&quot; /&gt;&lt;br/&gt;
 &lt;/fieldset&gt;
           </string>
 				<key>LongDescription</key>
@@ -1121,11 +1188,16 @@ To start the program type &lt;kbd&gt;run start&lt;/kbd&gt; and press &lt;kbd&gt;
 				<key>Description</key>
 				<string>Defines a client-side image-map </string>
 				<key>Example</key>
-				<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+				<string>&lt;p&gt;
+    Click on areas in the image below to go to different pages.
+&lt;/p&gt;
+&lt;img src=&quot;rainbow.png&quot; width=&quot;250&quot; height=&quot;300&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+
 &lt;map name=&quot;rainbowmap&quot;&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
-    &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,250,100&quot; alt=&quot;Yellow&quot; href=&quot;yellowPage.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,100,250,200&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,200,250,300&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+
 &lt;/map&gt;
           </string>
 				<key>LongDescription</key>
@@ -1178,9 +1250,9 @@ The browser will mark text within this tag in a special manner to highlight it t
 				<key>Example</key>
 				<string>
 &lt;nav&gt;
-    &lt;a href=&quot;../Colours.html&quot;&gt;Colours&lt;/a&gt;-
-    &lt;a href=&quot;../AllShapes.html&quot;&gt;Shapes&lt;/a&gt;-
-    &lt;a href=&quot;../LargeSizes.aspx&quot;&gt;Sizes&lt;/a&gt;
+    Link to &lt;a href=&quot;yellowPage.html&quot;&gt;Yellow&lt;/a&gt; page&lt;br/&gt;
+    Link to &lt;a href=&quot;red.html&quot;&gt;Red&lt;/a&gt; page&lt;br/&gt;
+    Link to &lt;a href=&quot;green.html&quot;&gt;Green&lt;/a&gt; page
 &lt;/nav&gt;
           </string>
 				<key>LongDescription</key>
@@ -1196,10 +1268,12 @@ Use the &lt;nav&gt; tag to group a collection of &lt;a&gt; hyperlinks. This can 
 				<key>Description</key>
 				<string>Defines alternative content when a script cannot be run</string>
 				<key>Example</key>
-				<string>
-&lt;script src=&quot;../includes/common.js&quot;&gt;&lt;/script&gt;
+				<string>&lt;script type=&quot;text/javascript&quot;&gt;
+document.write(&quot;Welcome to HTML&quot;)
+&lt;/script&gt;
 &lt;noscript&gt;
-The common javascript functions cannot be executed on this page - functionality will be affected.
+javascript cannot be executed on this page - functionality will be affected.
+                    
 &lt;/noscript&gt;
           </string>
 				<key>LongDescription</key>
@@ -1213,10 +1287,7 @@ The common javascript functions cannot be executed on this page - functionality 
 				<key>Description</key>
 				<string>Defines an embedded object or component</string>
 				<key>Example</key>
-				<string>
-&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
-    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
-    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+				<string>&lt;object data=&quot;CLOCK.MOV&quot; type=&quot;video/quicktime&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;                  
 &lt;/object&gt;
           </string>
 				<key>LongDescription</key>
@@ -1307,8 +1378,11 @@ The common javascript functions cannot be executed on this page - functionality 
 				<key>Example</key>
 				<string>
 &lt;p&gt;
-This is one line. &lt;br/&gt;
-This text will appear on the next line.
+This is a paragraph of text in a web page. It can be as long or as short as you like and it can contain any other html elements.
+&lt;/p&gt;
+&lt;p&gt;
+This is another paragraph - note it is positioned by the browser so that there is a gap between it and the previous paragraph.
+                    
 &lt;/p&gt;
           </string>
 				<key>LongDescription</key>
@@ -1322,10 +1396,8 @@ This text will appear on the next line.
 				<key>Description</key>
 				<string>Defines a parameter for an object</string>
 				<key>Example</key>
-				<string>
-&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
-    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
-    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+				<string>&lt;object data=&quot;track1.wav&quot;&gt;
+&lt;param name=&quot;autoplay&quot; value=&quot;false&quot; /&gt;
 &lt;/object&gt;
           </string>
 				<key>LongDescription</key>
@@ -1356,8 +1428,10 @@ Any line break or     extra    spaces will be kept
 				<key>Description</key>
 				<string>Represents the progress of a task</string>
 				<key>Example</key>
-				<string>
-&lt;progress value=&quot;33&quot; max=&quot;50&quot;&gt;&lt;/progress&gt;
+				<string>Download progress: 
+&lt;progress id=&quot;prog&quot; value=&quot;33&quot; max=&quot;100&quot;&gt;
+&lt;span id=&quot;downloadProgress&quot;&gt;33&lt;/span&gt;%
+&lt;/progress&gt; 
           </string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
@@ -1365,6 +1439,8 @@ Any line break or     extra    spaces will be kept
 Represents the progress of a task. Can be updated dynamically via javascript.</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -1406,17 +1482,13 @@ Result of computation:
 				<key>Description</key>
 				<string>Defines a client-side script</string>
 				<key>Example</key>
-				<string>
-&lt;p&gt;
-
-    &lt;script type=&quot;text/javascript&quot;&gt;
-    alert(&apos;This is some script!&apos;);
-    &lt;/script&gt;
-
-    &lt;script type=&quot;text/javascript&quot; src=&quot;../common.js&quot;&gt;&lt;/script&gt;
-
-&lt;/p&gt;
-          </string>
+				<string>&lt;p&gt;
+This page will show an alert to the user.
+&lt;script type=&quot;text/javascript&quot;&gt;
+alert(&apos;This is some script!&apos;);
+&lt;/script&gt;
+                    
+&lt;/p&gt;</string>
 				<key>LongDescription</key>
 				<string>The &lt;script&gt; tag is usually placed as a child of the &lt;head&gt; element. In the &lt;script&gt; tag place javascript or similar code for use in the page.</string>
 				<key>Syntax</key>
@@ -1433,6 +1505,16 @@ Result of computation:
     &lt;h1&gt;Analysis&lt;/h1&gt;
     &lt;p&gt;The analyis of the samples yielded the following results...&lt;/p&gt;
 &lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h1&gt;Review&lt;/h1&gt;
+    &lt;p&gt;The review of the results was carried out in July 2012. Here are the review findings...&lt;/p&gt;
+&lt;/section&gt; 
+
+&lt;section&gt;
+    &lt;h1&gt;Conclusion&lt;/h1&gt;
+    &lt;p&gt;The conclusion is that...&lt;/p&gt;
+&lt;/section&gt; 
           </string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
@@ -1465,7 +1547,10 @@ This tag is used to define a section in a document - similar to how  Microsoft W
 				<key>Description</key>
 				<string>Defines smaller text</string>
 				<key>Example</key>
-				<string>&lt;small&gt;This text will appear quite small!&lt;/small&gt;</string>
+				<string>&lt;p&gt;This text is in normal sized font&lt;/p&gt;
+&lt;p&gt;
+    &lt;small&gt;This text will appear quite small!&lt;/small&gt;
+&lt;/p&gt;</string>
 				<key>LongDescription</key>
 				<string>Simply displays text in a small font</string>
 				<key>Syntax</key>
@@ -1477,9 +1562,12 @@ This tag is used to define a section in a document - similar to how  Microsoft W
 				<key>Description</key>
 				<string>Defines media resources for &lt;audio&gt; and &lt;video&gt;</string>
 				<key>Example</key>
-				<string>
+				<string>&lt;p&gt;
+Use the controls below to play some audio:
+&lt;/p&gt;
 &lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
-    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+    &lt;source src=&quot;track1.wav&quot; type=&quot;audio/wav&quot; /&gt;
+    &lt;source src=&quot;track1.zzz&quot; type=&quot;audio/zzz&quot; /&gt;
     Your browser does not support the audio element, which is new to HTML5.
 &lt;/audio&gt;
           </string>
@@ -1499,7 +1587,7 @@ The &lt;source&gt; element allows you to specify alternate files that the browse
 				<string>Defines a section in a document</string>
 				<key>Example</key>
 				<string>
-&lt;p&gt;There are many colors in a rainbow like &lt;span class=&quot;yellow&quot;&gt;yellow&lt;/span&gt; or &lt;span class=&quot;green&quot;&gt;green&lt;/span&gt; and many more...&lt;/p&gt;
+                    &lt;p&gt;There are many colors in a rainbow like &lt;span style=&quot;color:yellow&quot;&gt;yellow&lt;/span&gt; or &lt;span style=&quot;color:green&quot;&gt;green&lt;/span&gt; and many more...&lt;/p&gt;
           </string>
 				<key>LongDescription</key>
 				<string>The &lt;span&gt; tag is used to group content in a document. Styles can be applied to the &lt;span&gt; element which will apply to all of it&apos;s content.</string>
@@ -1535,7 +1623,11 @@ The &lt;strong&gt;important&lt;/strong&gt; word has been bolded
     p {font-weight:bold}
     &lt;/style&gt;
 &lt;/head&gt;
-
+&lt;body&gt;
+    &lt;h1&gt;This is a Yellow Heading&lt;/h1&gt;
+    This font is normal weight
+    &lt;p&gt;This font should be bolded&lt;/p&gt;
+&lt;/body&gt;
           </string>
 				<key>LongDescription</key>
 				<string>The &lt;style&gt; tag is used to apply styles directly in a document. Often instead of this, styles are defined in external .css files but sometimes it&apos;s useful to define styles directly - usually in the &lt;head&gt; element.</string>
@@ -1658,10 +1750,12 @@ The value of 10&lt;sup&gt;2&lt;/sup&gt; = 100.
 				<string>Defines a form text input with multiple lines</string>
 				<key>Example</key>
 				<string>
-&lt;form action=&quot;emailsubmit.aspx&quot;&gt;
+&lt;form action=&quot;emailsubmit.html&quot;&gt;
     Please enter email content below:
     &lt;br /&gt;
-    &lt;textarea name=&quot;email&quot; cols=&quot;50&quot; rows=&quot;9&quot;&gt;Enter email content here.&lt;/textarea&gt;
+    &lt;textarea name=&quot;email&quot; cols=&quot;50&quot; rows=&quot;9&quot;&gt;Enter email content here and press submit (Just a demo!)&lt;/textarea&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
 &lt;/form&gt;
           </string>
 				<key>LongDescription</key>
@@ -1683,7 +1777,7 @@ The value of 10&lt;sup&gt;2&lt;/sup&gt; = 100.
             &lt;th&gt;Year&lt;/th&gt;
         &lt;/tr&gt;
     &lt;/thead&gt;
-    &lt;tfoot&gt;
+    &lt;tfoot style=&quot;background-color: yellow; font-weight: bold; color: blue&quot;&gt;
         &lt;tr&gt;
             &lt;td&gt;Average&lt;/td&gt;
             &lt;td&gt;1984&lt;/td&gt;
@@ -1830,6 +1924,8 @@ The &lt;title&gt; element defines the title of a HTML document. When it is set, 
 Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements. Currently does not have much browser support.</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -1882,7 +1978,7 @@ Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements. Currently does
 				<string>Defines a video or movie</string>
 				<key>Example</key>
 				<string>&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
-    &lt;source src=&quot;homemovie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    &lt;source src=&quot;CLOCK.MOV&quot; type=&quot;video/quicktime&quot; /&gt;
     Sorry, the browser does not support the video tag.
 &lt;/video&gt;
           </string>
@@ -1900,9 +1996,11 @@ The &lt;video&gt; tag is new to HTML5 and provides the ability to embed video co
 				<string>Defines where it is ok to add a line break if necessary</string>
 				<key>Example</key>
 				<string>&lt;p&gt;
-The longest word in a movie ever is Supercalifragilistic&lt;wbr/&gt;expialidocious from Mary Poppins.
-&lt;/p&gt;
-          </string>
+The longest word in a movie ever is Supercalifragilisticexpialidocious from Mary Poppins.
+&lt;/p&gt; 
+&lt;p&gt;The word will be repeated here lots of times to make sure a line-break is needed! If needed, the line-break will be inserted after &quot;Supercalifrag&quot;!
+&lt;br/&gt;
+Supercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidocious</string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
           
@@ -1931,11 +2029,16 @@ The &lt;wbr&gt; tag specifies where in a text it would be ok to add a line-break
 						<key>Description</key>
 						<string>Defines an area inside an image-map</string>
 						<key>Example</key>
-						<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+						<string>&lt;p&gt;
+Click on areas in the image below to go to different pages.
+&lt;/p&gt;
+&lt;img src=&quot;rainbow.png&quot; width=&quot;250&quot; height=&quot;300&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+                            
 &lt;map name=&quot;rainbowmap&quot;&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
-    &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;0,0,250,100&quot; alt=&quot;Yellow&quot; href=&quot;yellowPage.html&quot; /&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;0,100,250,200&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+&lt;area shape=&quot;rect&quot; coords=&quot;0,200,250,300&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+                            
 &lt;/map&gt;
   </string>
 						<key>LongDescription</key>
@@ -1986,8 +2089,11 @@ Used to mark content in a page which is not necessarily part of the main subject
 						<key>Description</key>
 						<string>Defines sound content</string>
 						<key>Example</key>
-						<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
-    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+						<string>&lt;p&gt;
+Use the controls below to play some audio:
+&lt;/p
+&gt;&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;track1.wav&quot; type=&quot;audio/wav&quot; /&gt;
     Your browser does not support the audio element, which is new to HTML5.
 &lt;/audio&gt;
   </string>
@@ -2007,10 +2113,10 @@ Defines audio / sound content for the page. Use this tag to link to an audio fil
 						<string>
 &lt;html&gt;
     &lt;head&gt;
-        &lt;title&gt;Short Movie&lt;/title&gt;
+        &lt;title&gt;Learnspree&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;EMBED SRC=&quot;shortmovie.mov&quot;, WIDTH=150, HEIGHT=250 CONTROLS=TRUE&gt;
+        &lt;EMBED SRC=&quot;CLOCK.MOV&quot; WIDTH=300 HEIGHT=200 /&gt;
     &lt;/body&gt;
 &lt;/html&gt;
         					</string>
@@ -2029,8 +2135,8 @@ This tag is re-introduced to HTML as part of HTML5. It has similar purpose to th
 						<key>Example</key>
 						<string>&lt;figure&gt;
     &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
-    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
-    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+    &lt;img src=&quot;europeanMap.png&quot; alt=&quot;Europe&quot;
+    width=&quot;300&quot; height=&quot;300&quot; /&gt;
 &lt;/figure&gt;
   </string>
 						<key>LongDescription</key>
@@ -2048,8 +2154,8 @@ Defines a caption for the &lt;figure&gt; element. Can be placed as either the fi
 						<key>Example</key>
 						<string>&lt;figure&gt;
     &lt;figcaption&gt;A map of Europe&lt;/figcaption&gt;
-    &lt;img src=&quot;europeanMap.jpg&quot; alt=&quot;Europe&quot;
-    width=&quot;100&quot; height=&quot;100&quot; /&gt;
+    &lt;img src=&quot;europeanMap.png&quot; alt=&quot;Europe&quot;
+    width=&quot;300&quot; height=&quot;300&quot; /&gt;
 &lt;/figure&gt;
   </string>
 						<key>LongDescription</key>
@@ -2068,7 +2174,17 @@ While it is related to the main flow, its position is independent of the main fl
 						<key>Description</key>
 						<string>Defines an image</string>
 						<key>Example</key>
-						<string>&lt;img src=&quot;yellowsun.gif&quot; alt=&quot;sun&quot;/&gt;</string>
+						<string>&lt;p&gt;
+    Below is a simple image of a rainbow:
+    &lt;img src=&quot;rainbow.png&quot; alt=&quot;rainbow&quot; style=&quot;width: 300px; height: 100px&quot;/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+    Below is an example of an image link - click it:
+    &lt;a href=&quot;yellowPage.html&quot;&gt;
+        &lt;img src=&quot;yellowLink.png&quot; alt=&quot;yellow&quot;/&gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+</string>
 						<key>LongDescription</key>
 						<string>Use this tag to embed an image into the document. Can be combined with the &lt;a&gt; tag to create an image link.</string>
 						<key>Syntax</key>
@@ -2096,11 +2212,16 @@ While it is related to the main flow, its position is independent of the main fl
 						<key>Description</key>
 						<string>Defines a client-side image-map </string>
 						<key>Example</key>
-						<string>&lt;img src=&quot;rainbow.gif&quot; width=&quot;115&quot; height=&quot;336&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+						<string>&lt;p&gt;
+    Click on areas in the image below to go to different pages.
+&lt;/p&gt;
+&lt;img src=&quot;rainbow.png&quot; width=&quot;250&quot; height=&quot;300&quot; alt=&quot;Rainbow&quot; usemap=&quot;#rainbowmap&quot; /&gt;
+
 &lt;map name=&quot;rainbowmap&quot;&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,12,44&quot; alt=&quot;Yellow&quot; href=&quot;yellow.html&quot; /&gt;
-    &lt;area shape=&quot;rect&quot; coords=&quot;33,28,3&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
-    &lt;area shape=&quot;circle&quot; coords=&quot;12,58,8&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,0,250,100&quot; alt=&quot;Yellow&quot; href=&quot;yellowPage.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,100,250,200&quot; alt=&quot;Red&quot; href=&quot;red.html&quot; /&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;0,200,250,300&quot; alt=&quot;Green&quot; href=&quot;green.html&quot; /&gt;
+
 &lt;/map&gt;
   </string>
 						<key>LongDescription</key>
@@ -2114,9 +2235,11 @@ While it is related to the main flow, its position is independent of the main fl
 						<key>Description</key>
 						<string>Defines alternative content when a script cannot be run</string>
 						<key>Example</key>
-						<string>&lt;script src=&quot;../includes/common.js&quot;&gt;&lt;/script&gt;
+						<string>&lt;script type=&quot;text/javascript&quot;&gt;
+document.write(&quot;Welcome to HTML&quot;)
+&lt;/script&gt;
 &lt;noscript&gt;
-The common javascript functions cannot be executed on this page - functionality will be affected.
+javascript cannot be executed on this page - functionality will be affected.
 &lt;/noscript&gt;
   </string>
 						<key>LongDescription</key>
@@ -2130,9 +2253,7 @@ The common javascript functions cannot be executed on this page - functionality 
 						<key>Description</key>
 						<string>Defines an embedded object or component</string>
 						<key>Example</key>
-						<string>&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
-    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
-    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+						<string>&lt;object data=&quot;CLOCK.MOV&quot; type=&quot;video/quicktime&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
 &lt;/object&gt;
   </string>
 						<key>LongDescription</key>
@@ -2146,9 +2267,9 @@ The common javascript functions cannot be executed on this page - functionality 
 						<key>Description</key>
 						<string>Defines a parameter for an object</string>
 						<key>Example</key>
-						<string>&lt;object data=&quot;data:application/x-silverlight-2,&quot; type=&quot;application/x-silverlight-2&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
-    &lt;param name=&quot;source&quot; value=&quot;SilverlightObject.xap&quot;/&gt;
-    &lt;param name=&quot;initParams&quot; value=&quot;Color=Red&quot;/&gt;
+						<string>&lt;object data=&quot;track1.wav&quot;&gt;
+&lt;param name=&quot;autoplay&quot; value=&quot;false&quot; /&gt;
+                            
 &lt;/object&gt;
   </string>
 						<key>LongDescription</key>
@@ -2162,17 +2283,14 @@ The common javascript functions cannot be executed on this page - functionality 
 						<key>Description</key>
 						<string>Defines a client-side script</string>
 						<key>Example</key>
-						<string>
-&lt;p&gt;
-
-    &lt;script type=&quot;text/javascript&quot;&gt;
-    alert(&apos;This is some script!&apos;);
-    &lt;/script&gt;
-
-    &lt;script type=&quot;text/javascript&quot; src=&quot;../common.js&quot;&gt;&lt;/script&gt;
-
+						<string>&lt;p&gt;
+This page will show an alert to the user.
+&lt;script type=&quot;text/javascript&quot;&gt;
+alert(&apos;This is some script!&apos;);
+&lt;/script&gt;
+                            
 &lt;/p&gt;
-          					</string>
+                        </string>
 						<key>LongDescription</key>
 						<string>The &lt;script&gt; tag is usually placed as a child of the &lt;head&gt; element. In the &lt;script&gt; tag place javascript or similar code for use in the page.</string>
 						<key>Syntax</key>
@@ -2184,8 +2302,12 @@ The common javascript functions cannot be executed on this page - functionality 
 						<key>Description</key>
 						<string>Defines media resources for &lt;audio&gt; and &lt;video&gt;</string>
 						<key>Example</key>
-						<string>&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
-    &lt;source src=&quot;talk.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+						<string>&lt;p&gt;
+Use the controls below to play some audio:
+&lt;/p&gt;
+&lt;audio controls=&quot;controls&quot; autoplay=&quot;autoplay&quot;&gt;
+    &lt;source src=&quot;track1.wav&quot; type=&quot;audio/wav&quot; /&gt;
+    &lt;source src=&quot;track1.zzz&quot; type=&quot;audio/zzz&quot; /&gt;
     Your browser does not support the audio element, which is new to HTML5.
 &lt;/audio&gt;
   </string>
@@ -2217,6 +2339,8 @@ The &lt;source&gt; element allows you to specify alternate files that the browse
 Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements. Currently does not have much browser support.</string>
 						<key>Syntax</key>
 						<string> </string>
+						<key>ShowDemo</key>
+						<string>NO</string>
 					</dict>
 					<dict>
 						<key>CommandName</key>
@@ -2225,7 +2349,7 @@ Defines text tracks for &lt;audio&gt; and &lt;video&gt; elements. Currently does
 						<string>Defines a video or movie</string>
 						<key>Example</key>
 						<string>&lt;video width=&quot;320&quot; height=&quot;240&quot; controls=&quot;controls&quot;&gt;
-    &lt;source src=&quot;homemovie.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+    &lt;source src=&quot;CLOCK.MOV&quot; type=&quot;video/quicktime&quot; /&gt;
     Sorry, the browser does not support the video tag.
 &lt;/video&gt;
   </string>
@@ -2291,17 +2415,23 @@ The &lt;video&gt; tag is new to HTML5 and provides the ability to embed video co
 						<key>Description</key>
 						<string>Used to draw graphics, on the fly, via scripting (usually JavaScript)</string>
 						<key>Example</key>
-						<string>&lt;script&gt;
-var canvas1 = document.getElementById(&apos;myCanvas&apos;);
-if(canvas1.getContext) {
-var context = canvas1.getContext(&apos;2d&apos;);
-context.fillRect(50,25,25,25);
-}
-&lt;/script&gt;
+						<string>&lt;p&gt;You should see 3 squares below:&lt;/p&gt;
 
-&lt;canvas id=&quot;myCanvas&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
 Your browser doesn&apos;t support canvas.
 &lt;/canvas&gt;
+
+&lt;script&gt;
+var canvas1 = document.getElementById(&apos;myCanvas&apos;);
+if (canvas1.getContext) {
+var context = canvas1.getContext(&apos;2d&apos;);
+context.strokeStyle = &quot;#2E94DE&quot;;
+context.strokeRect(10, 10, 75, 75);
+context.strokeRect(25, 25, 100, 100);
+context.strokeStyle = &quot;#FF0000&quot;;
+context.strokeRect(95, 95, 55, 55);
+}
+&lt;/script&gt;
   </string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
@@ -2318,6 +2448,8 @@ New tag in HTML5 which allows complex drawing via javascript code within its def
 						<key>Example</key>
 						<string>&lt;div style=&quot;color: red&quot;&gt;
     &lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div style=&quot;color: green&quot;&gt;
     &lt;ol&gt;
         &lt;li&gt;One&lt;/li&gt;
         &lt;li&gt;Two&lt;/li&gt;
@@ -2373,13 +2505,14 @@ This tag is used to contain footer information such as author, contact or legal 
     &lt;h1&gt;Main Title&lt;/h1&gt;
     &lt;h2&gt;Sub Title&lt;/h2&gt;
 &lt;/hgroup&gt;
+&lt;p&gt;
+This is the rest of the document…
+&lt;/p&gt;
   </string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
 						          
 Used to group a set of &lt;h1&gt;…&lt;h6&gt; elements.
-						
-When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will mask the lowest level all but the highest level heading in the group from the resulting document outline.
         </string>
 						<key>Syntax</key>
 						<string> </string>
@@ -2447,10 +2580,17 @@ When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will 
 &lt;html&gt;
 
     &lt;body&gt;
+    
     This is where the main content of the document would go.
+    &lt;br/&gt;
+    This is some text.
+    &lt;br/&gt;
+    Below is an iframe containing the local page &quot;yellowPage.html&quot;.
+    &lt;br/&gt;
 
-    &lt;iframe SRC=&quot;demo.html&quot; WIDTH=250 HEIGHT=200&gt;
+    &lt;iframe SRC=&quot;yellowPage.html&quot; WIDTH=250 HEIGHT=200&gt;
     &lt;/iframe&gt;
+
 
     &lt;/body&gt;
 
@@ -2468,8 +2608,11 @@ When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will 
 						<string>Defines a paragraph</string>
 						<key>Example</key>
 						<string>&lt;p&gt;
-    This is one line. &lt;br/&gt;
-    This text will appear on the next line.
+This is a paragraph of text in a web page. It can be as long or as short as you like and it can contain any other html elements.
+&lt;/p&gt;
+&lt;p&gt;
+This is another paragraph - note it is positioned by the browser so that there is a gap between it and the previous paragraph.
+                            
 &lt;/p&gt;
   </string>
 						<key>LongDescription</key>
@@ -2487,6 +2630,16 @@ When grouping headings in an &lt;hgroup&gt; element, the outline algorithm will 
     &lt;h1&gt;Analysis&lt;/h1&gt;
     &lt;p&gt;The analyis of the samples yielded the following results...&lt;/p&gt;
 &lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h1&gt;Review&lt;/h1&gt;
+    &lt;p&gt;The review of the results was carried out in July 2012. Here are the review findings...&lt;/p&gt;
+&lt;/section&gt; 
+
+&lt;section&gt;
+    &lt;h1&gt;Conclusion&lt;/h1&gt;
+    &lt;p&gt;The conclusion is that...&lt;/p&gt;
+&lt;/section&gt; 
   </string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
@@ -2501,7 +2654,7 @@ This tag is used to define a section in a document - similar to how  Microsoft W
 						<key>Description</key>
 						<string>Defines a section in a document</string>
 						<key>Example</key>
-						<string>&lt;p&gt;There are many colors in a rainbow like &lt;span class=&quot;yellow&quot;&gt;yellow&lt;/span&gt; or &lt;span class=&quot;green&quot;&gt;green&lt;/span&gt; and many more...&lt;/p&gt;
+						<string>&lt;p&gt;There are many colors in a rainbow like &lt;span style=&quot;color:yellow&quot;&gt;yellow&lt;/span&gt; or &lt;span style=&quot;color:green&quot;&gt;green&lt;/span&gt; and many more...&lt;/p&gt;
   </string>
 						<key>LongDescription</key>
 						<string>The &lt;span&gt; tag is used to group content in a document. Styles can be applied to the &lt;span&gt; element which will apply to all of it&apos;s content.</string>
@@ -2515,8 +2668,11 @@ This tag is used to define a section in a document - similar to how  Microsoft W
 						<string>Defines where it is ok to add a line break if necessary</string>
 						<key>Example</key>
 						<string>&lt;p&gt;
-    The longest word in a movie ever is Supercalifragilistic&lt;wbr/&gt;expialidocious from Mary Poppins.
-&lt;/p&gt;
+The longest word in a movie ever is Supercalifragilisticexpialidocious from Mary Poppins.
+&lt;/p&gt; 
+&lt;p&gt;The word will be repeated here lots of times to make sure a line-break is needed! If needed, the line-break will be inserted after &quot;Supercalifrag&quot;!
+&lt;br/&gt;
+Supercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidociousSupercalifrag&lt;wbr/&gt;ilisticexpialidocious
   </string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
@@ -2671,11 +2827,13 @@ Note this is different to the &lt;q&gt; tag used to display short quotations.
 						<string>
 &lt;p&gt;
     &lt;dfn&gt;Book&lt;/dfn&gt;: Something you read
+&lt;br/&gt;
     &lt;dfn&gt;Television&lt;/dfn&gt;: Something you watch
 &lt;/p&gt;
         					</string>
 						<key>LongDescription</key>
-						<string>The browser applies formatting to mark the text inside the &lt;dfn&gt; tag as a &quot;definition&quot; term. </string>
+						<string>The browser applies formatting to mark the text inside the &lt;dfn&gt; tag as a &quot;definition&quot; term.
+In most browsers (e.g. Firefox, Opera), the text inside the &lt;dfn&gt; element will be in an italic font, except for WebKit browsers such as Chrome and Safari which display it in an upright font.</string>
 						<key>Syntax</key>
 						<string> </string>
 					</dict>
@@ -2697,7 +2855,12 @@ Note this is different to the &lt;q&gt; tag used to display short quotations.
 						<key>Description</key>
 						<string>Defines HTML headings</string>
 						<key>Example</key>
-						<string>&lt;h1&gt;Main Title&lt;/h1&gt;</string>
+						<string>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</string>
 						<key>LongDescription</key>
 						<string>Use &lt;h1&gt; to &lt;h6&gt; to define different levels of subject headings in the document in descending order.</string>
 						<key>Syntax</key>
@@ -2712,6 +2875,9 @@ Note this is different to the &lt;q&gt; tag used to display short quotations.
 						<string>&lt;header&gt;
     &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
 &lt;/header&gt;
+&lt;p&gt;
+This is the rest of the document…
+&lt;/p&gt;
   </string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
@@ -2790,8 +2956,10 @@ The browser will mark text within this tag in a special manner to highlight it t
 						<key>Description</key>
 						<string>Represents the progress of a task</string>
 						<key>Example</key>
-						<string>
-    &lt;progress value=&quot;33&quot; max=&quot;50&quot;&gt;&lt;/progress&gt;
+						<string>Download progress: 
+&lt;progress id=&quot;prog&quot; value=&quot;33&quot; max=&quot;100&quot;&gt;
+&lt;span id=&quot;downloadProgress&quot;&gt;33&lt;/span&gt;%
+&lt;/progress&gt; 
   </string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
@@ -2799,6 +2967,8 @@ The browser will mark text within this tag in a special manner to highlight it t
 Represents the progress of a task. Can be updated dynamically via javascript.</string>
 						<key>Syntax</key>
 						<string> </string>
+						<key>ShowDemo</key>
+						<string>NO</string>
 					</dict>
 					<dict>
 						<key>CommandName</key>
@@ -2838,7 +3008,10 @@ Represents the progress of a task. Can be updated dynamically via javascript.</s
 						<key>Description</key>
 						<string>Defines smaller text</string>
 						<key>Example</key>
-						<string>&lt;small&gt;This text will appear quite small!&lt;/small&gt;</string>
+						<string>&lt;p&gt;This text is in normal sized font&lt;/p&gt;
+&lt;p&gt;
+    &lt;small&gt;This text will appear quite small!&lt;/small&gt;
+&lt;/p&gt;</string>
 						<key>LongDescription</key>
 						<string>Simply displays text in a small font</string>
 						<key>Syntax</key>
@@ -2871,7 +3044,11 @@ Represents the progress of a task. Can be updated dynamically via javascript.</s
         p {font-weight:bold}
     &lt;/style&gt;
 &lt;/head&gt;
-
+&lt;body&gt;
+    &lt;h1&gt;This is a Yellow Heading&lt;/h1&gt;
+    This font is normal weight
+    &lt;p&gt;This font should be bolded&lt;/p&gt;
+&lt;/body&gt;
   </string>
 						<key>LongDescription</key>
 						<string>The &lt;style&gt; tag is used to apply styles directly in a document. Often instead of this, styles are defined in external .css files but sometimes it&apos;s useful to define styles directly - usually in the &lt;head&gt; element.</string>
@@ -2983,6 +3160,8 @@ Also, can be used for intra-document linking (linking to a specific location on 
 				<string>The &lt;base&gt; tag is used to specify a base URL for all links in the document (i.e.  &lt;a&gt; elements). This tag can only be specified once in the document and must be contained within the &lt;head&gt;.</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -3013,9 +3192,13 @@ The &quot;onclick&quot; attribute can be used to execute javascript code to take
 				<key>LongDescription</key>
 				<string>New in HTML5.
 				
-The &lt;command&gt; tag is used to define a particular command that can be shared by multiple controls on the interface (e.g. Radiobutton, checkbox, command button). This allows sharing of features such as enabled state between the linked controls.</string>
+The &lt;command&gt; tag is used to define a particular command that can be shared by multiple controls on the interface (e.g. Radiobutton, checkbox, command button). This allows sharing of features such as enabled state between the linked controls.
+                
+Currently the &lt;command&gt; tag has limited browser support.</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -3023,7 +3206,12 @@ The &lt;command&gt; tag is used to define a particular command that can be share
 				<key>Description</key>
 				<string>Defines a list of predefined auto-complete options for a text input field.</string>
 				<key>Example</key>
-				<string>&lt;input list=&quot;countries&quot; /&gt;
+				<string>&lt;p&gt;When the mobile safari browser supports the datalist tag, this demo will autocomplete text which matches
+the list of options in the datalist. &lt;br /&gt;
+Until then, try the example in Firefox or Opera and it will work. 
+&lt;/p&gt;
+                    
+&lt;input list=&quot;countries&quot; /&gt;
 
 &lt;datalist id=&quot;countries&quot;&gt;
     &lt;option value=&quot;Germany&quot;&gt;
@@ -3067,9 +3255,13 @@ The &lt;datalist&gt; tag is used to provide auto-complete options on an &lt;inpu
 				<string>New in HTML5.
 				          
 The &lt;details&gt; tag can be used to add any content to a page which is usually hidden by default by the browser but can be opened by the user to reveal the additional information.
+                    
+Currently the &lt;details&gt; tag has limited browser support.
           			</string>
 				<key>Syntax</key>
 				<string> </string>
+				<key>ShowDemo</key>
+				<string>NO</string>
 			</dict>
 			<dict>
 				<key>CommandName</key>
@@ -3100,9 +3292,9 @@ The &lt;details&gt; tag can be used to add any content to a page which is usuall
 				<string>Defines an HTML form for user input</string>
 				<key>Example</key>
 				<string>&lt;form method=&quot;post&quot; action=&quot;color.aspx&quot;&gt;
-First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;:&lt;br /&gt;
-Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;:&lt;br /&gt;
-Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;:&lt;br /&gt;
+First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;&lt;br /&gt;
+Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;&lt;br /&gt;
+Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;&lt;br /&gt;
 &lt;/form&gt;
           </string>
 				<key>LongDescription</key>
@@ -3178,9 +3370,9 @@ To start the program type &lt;kbd&gt;run start&lt;/kbd&gt; and press &lt;kbd&gt;
 				<key>Example</key>
 				<string>&lt;fieldset&gt;
     &lt;legend&gt;Employee Data&lt;/legend&gt;
-    Name: &lt;input type=&quot;text&quot; name=&quot;empname&quot; /&gt;
-    Address: &lt;input type=&quot;text&quot; name=&quot;empaddress&quot; /&gt;
-    Title: &lt;input type=&quot;text&quot; name=&quot;jobtitle&quot; /&gt;
+    Name: &lt;input type=&quot;text&quot; name=&quot;empname&quot; /&gt;&lt;br/&gt;
+    Address: &lt;input type=&quot;text&quot; name=&quot;empaddress&quot; /&gt;&lt;br/&gt;
+    Title: &lt;input type=&quot;text&quot; name=&quot;jobtitle&quot; /&gt;&lt;br/&gt;
 &lt;/fieldset&gt;
           </string>
 				<key>LongDescription</key>
@@ -3196,9 +3388,9 @@ To start the program type &lt;kbd&gt;run start&lt;/kbd&gt; and press &lt;kbd&gt;
 				<key>Example</key>
 				<string>
 &lt;nav&gt;
-    &lt;a href=&quot;../Colours.html&quot;&gt;Colours&lt;/a&gt;-
-    &lt;a href=&quot;../AllShapes.html&quot;&gt;Shapes&lt;/a&gt;-
-    &lt;a href=&quot;../LargeSizes.aspx&quot;&gt;Sizes&lt;/a&gt;
+    Link to &lt;a href=&quot;yellowPage.html&quot;&gt;Yellow&lt;/a&gt; page&lt;br/&gt;
+    Link to &lt;a href=&quot;red.html&quot;&gt;Red&lt;/a&gt; page&lt;br/&gt;
+    Link to &lt;a href=&quot;green.html&quot;&gt;Green&lt;/a&gt; page
 &lt;/nav&gt;
           </string>
 				<key>LongDescription</key>
@@ -3278,10 +3470,12 @@ Use the &lt;nav&gt; tag to group a collection of &lt;a&gt; hyperlinks. This can 
 				<key>Description</key>
 				<string>Defines a form text input with multiple lines</string>
 				<key>Example</key>
-				<string>&lt;form action=&quot;emailsubmit.aspx&quot;&gt;
+				<string>&lt;form action=&quot;emailsubmit.html&quot;&gt;
     Please enter email content below:
     &lt;br /&gt;
-    &lt;textarea name=&quot;email&quot; cols=&quot;50&quot; rows=&quot;9&quot;&gt;Enter email here.&lt;/textarea&gt;
+    &lt;textarea name=&quot;email&quot; cols=&quot;50&quot; rows=&quot;9&quot;&gt;Enter email content here and press submit (just a demo!)&lt;/textarea&gt;
+    &lt;br /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
 &lt;/form&gt;
           </string>
 				<key>LongDescription</key>
@@ -3305,7 +3499,20 @@ Use the &lt;nav&gt; tag to group a collection of &lt;a&gt; hyperlinks. This can 
 				<key>Description</key>
 				<string>Defines a page comment</string>
 				<key>Example</key>
-				<string>&lt;!-- This is a comment describing the HTML below --&gt;</string>
+				<string>&lt;!-- This is a comment describing the HTML below --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Doc Title&lt;/title&gt;
+    &lt;/head&gt;
+                    
+    &lt;body&gt;
+    &lt;!-- This is a comment about the BODY --&gt;
+    This is the main body of the document
+    &lt;/body&gt;
+                    
+&lt;/html&gt;
+</string>
 				<key>LongDescription</key>
 				<string>Comments are not visible in the page rendered by the browser. They are for benefit of developers mostly as source code notes. Can also be used to hide scripts from browsers who do not support them. </string>
 				<key>Syntax</key>
@@ -3615,7 +3822,7 @@ The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the
 &lt;table border=&quot;0&quot;&gt;
     &lt;colgroup&gt;
         &lt;col style=&quot;background-color:green&quot; /&gt;
-        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;background-color:red&quot; /&gt;
     &lt;/colgroup&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -3648,7 +3855,7 @@ The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the
 &lt;table border=&quot;0&quot;&gt;
     &lt;colgroup&gt;
         &lt;col style=&quot;background-color:green&quot; /&gt;
-        &lt;col span=&quot;2&quot; style=&quot;color:blue&quot; /&gt;
+        &lt;col span=&quot;2&quot; style=&quot;background-color:red&quot; /&gt;
     &lt;/colgroup&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -3766,7 +3973,7 @@ The list is displayed by the browser such that the &lt;dd&gt; elements (i.e. the
             &lt;th&gt;Year&lt;/th&gt;
         &lt;/tr&gt;
     &lt;/thead&gt;
-    &lt;tfoot&gt;
+    &lt;tfoot style=&quot;background-color: yellow; font-weight: bold; color: blue&quot;&gt;
         &lt;tr&gt;
             &lt;td&gt;Average&lt;/td&gt;
             &lt;td&gt;1984&lt;/td&gt;

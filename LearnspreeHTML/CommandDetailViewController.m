@@ -13,6 +13,7 @@
 // private helper methods
 @interface CommandDetailViewController (PrivateMethods)
 - (void)displayFormattedText:(NSString *)rawText;
+- (void)displayExampleDemo:(NSString *)demoHtmlText;
 - (void)displayCommandDetail:(int)selectedSegmentIndex;
 @end
 
@@ -27,6 +28,7 @@
 @synthesize commandSyntax;
 @synthesize commandLongDescription;
 @synthesize commandExample;
+@synthesize showDemo;
 
 
 
@@ -39,7 +41,7 @@
 
 // viewdidload - set background image
 - (void)viewDidLoad {
-    
+       
     // background view (image)
     self.view.backgroundColor = [UIColor blackColor]; 
     [commandLongDescriptionView setBackgroundColor:[UIColor blackColor]];
@@ -58,6 +60,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	
+    // check if we're showing a different command than last time we were shown
     if (commandName != previousCommandName)
     {
         // set default position of segment to the first option 
@@ -72,6 +75,22 @@
         self.previousCommandName = commandName;
     }
     
+    // check if the html demo is worth showing in the demo segment
+    // by checking if a head is in the example but no body - e.g. meta examples
+    // also check special case for comment tag which has nothing to show
+    NSRange bodyIndexRange = [self.commandExample rangeOfString:@"<body>"];
+    NSRange headIndexRange = [self.commandExample rangeOfString:@"<head>"];
+    if ((bodyIndexRange.location == NSNotFound && headIndexRange.location != NSNotFound) ||
+        (self.showDemo == NO))
+    {
+        // hide "demo" segment
+        [commandDisplaySegment setWidth:0.01 forSegmentAtIndex:2];
+    }
+    else
+    {
+        // show "demo" segment (might have been hidden last time)
+        [commandDisplaySegment setWidth:0.0 forSegmentAtIndex:2];
+    }
 
 	[super viewWillAppear:animated];
 }
@@ -134,12 +153,57 @@
             [FlurryAnalytics logEvent:@"VIEW EXAMPLE" withParameters:flurryDictionary];
             break; 
         case 2:
-            [self displayFormattedText:commandSyntax];
-            [FlurryAnalytics logEvent:@"VIEW SYNTAX" withParameters:flurryDictionary];
+            [self displayExampleDemo:commandExample];
+            [FlurryAnalytics logEvent:@"VIEW DEMO" withParameters:flurryDictionary];
             break;
         default: 
             break;
     }
+}
+
+// method to display the given text in the webuicontrol directly (as a demo)
+- (void)displayExampleDemo:(NSString *)demoHtmlText {
+    
+    // create mutable string for final html
+    NSMutableString* finalHtml = [NSMutableString stringWithCapacity:[demoHtmlText length]];
+    
+    // check for existance of a body, head tags
+    NSRange bodyIndexRange = [demoHtmlText rangeOfString:@"<body>"];
+    NSRange headIndexRange = [demoHtmlText rangeOfString:@"<head>"];
+    NSRange htmlIndexRange = [demoHtmlText rangeOfString:@"<html>"];
+    
+    // if just a html snippet - surround in a full html document with styling to show it on a black background which the uiwebview has
+    if (htmlIndexRange.location == NSNotFound && headIndexRange.location == NSNotFound && bodyIndexRange.location == NSNotFound)
+    {
+        [finalHtml appendFormat:@"%@%@%@", 
+         @"<html><head><meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'><style type=""text/css""> div.formatted { background-color:transparent; color: white;width:100%;overflow:hidden; font-family: verdana; font-size: 14px;   } div.formatted table { color: white; } </style></head><body><div class=""formatted""><p>", 
+         demoHtmlText, 
+         @"</p></div></body></html>"];
+    }
+    // if html example has a proper head and body, then insert meta-viewport and styling into header
+    else if (headIndexRange.location != NSNotFound && bodyIndexRange.location != NSNotFound)
+    {
+        [finalHtml appendFormat:@"%@%@%@", 
+         [demoHtmlText substringToIndex:headIndexRange.location + 6], 
+         @"<meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'><style type=""text/css""> body { background-color:transparent; color: white;width:100%;overflow:hidden;  font-family: verdana; font-size: 14px;   } </style>", 
+         [demoHtmlText substringFromIndex:headIndexRange.location + 6]];
+    }
+    // if there is a body but no head, then create a new head and insert before body
+    else if (headIndexRange.location == NSNotFound && bodyIndexRange.location != NSNotFound)
+    {
+        [finalHtml appendFormat:@"%@%@%@", 
+         [demoHtmlText substringToIndex:bodyIndexRange.location], 
+         @"<head><meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0;'><style type=""text/css""> body { background-color:transparent;  color: white;width:100%;overflow:hidden;  font-family: verdana; font-size: 14px;  } </style></head>", 
+         [demoHtmlText substringFromIndex:bodyIndexRange.location]];
+    }
+    else
+    {
+        // default case - shouldn't happen
+        [finalHtml appendString:demoHtmlText];
+    }
+    
+    // set final html for webview
+    [self.commandLongDescriptionView loadHTMLString:finalHtml baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
 }
 
 // method to populate the uiwebview with formatted text

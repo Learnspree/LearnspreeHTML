@@ -20,6 +20,7 @@
 	NSString *commandSyntax;
 	NSString *commandLongDescription;
     NSString *commandExample;
+    BOOL showDemo; 
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *commandLongDescriptionView;
@@ -31,5 +32,6 @@
 @property (nonatomic, retain) NSString *commandSyntax;
 @property (nonatomic, retain) NSString *commandLongDescription;
 @property (nonatomic, retain) NSString *commandExample;
+@property (nonatomic, assign) BOOL showDemo;
 
 @end

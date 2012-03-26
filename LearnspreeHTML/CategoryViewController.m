@@ -152,6 +152,15 @@
         childController.commandLongDescription = [[selectedCommand valueForKey:@"LongDescription"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         childController.commandSyntax = [selectedCommand valueForKey:@"Syntax"];  
         childController.commandExample = [[selectedCommand valueForKey:@"Example"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        // set show-demo to false only if the command has a key "ShowDemo" set to NO
+        if ([[selectedCommand valueForKey:@"ShowDemo"] isEqualToString:@"NO"])
+        {
+            childController.showDemo = NO;
+        }
+        else
+        {
+            childController.showDemo = YES;
+        }
         
         // log flurry events
         [FlurryAnalytics logEvent:childController.commandName]; 
