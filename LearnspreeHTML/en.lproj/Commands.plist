@@ -68,10 +68,14 @@ The &lt;!DOCTYPE&gt; declaration must be the very first element in your HTML doc
 &lt;p&gt;
     &lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot;&gt;Launch Google in a new browser window!&lt;/a&gt;
     &lt;br/&gt;
-    &lt;a href=&quot;#destination_name&quot;&gt;Destination&lt;/a&gt;
+    &lt;br/&gt;
+    This &lt;a href=&quot;#destination_name&quot;&gt;internal link&lt;/a&gt; will navigate to a destination at the bottom of the page.
 &lt;/p&gt;
+&lt;div style=&quot;height: 400px; background: gray;&quot;&gt;
+This is a grey area inserted to make the page longer to better demonstrate the internal page link.
+&lt;/div&gt;
 &lt;p&gt;
-    &lt;a name=&quot;destination_name&quot;&gt;&lt;/a&gt;
+    &lt;a name=&quot;destination_name&quot;&gt;This is the destination of the internal page link&lt;/a&gt;
 &lt;/p&gt;
         </string>
 				<key>LongDescription</key>
@@ -825,10 +829,11 @@ This tag is used to contain footer information such as author, contact or legal 
 				<key>Description</key>
 				<string>Defines an HTML form for user input</string>
 				<key>Example</key>
-				<string>&lt;form method=&quot;post&quot; action=&quot;color.aspx&quot;&gt;
+				<string>&lt;form method=&quot;post&quot; action=&quot;red.html&quot;&gt;
     First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;&lt;br /&gt;
     Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;&lt;br /&gt;
     Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;&lt;br /&gt;
+    &lt;input type=&quot;submit&quot;/&gt;
 &lt;/form&gt;
           </string>
 				<key>LongDescription</key>
@@ -1414,7 +1419,8 @@ This is another paragraph - note it is positioned by the browser so that there i
 				<string>
 &lt;pre&gt;
 This is some     text.
-Any line break or     extra    spaces will be kept
+Any line break or     extra    spaces 
+will be kept
 &lt;/pre&gt;
           </string>
 				<key>LongDescription</key>
@@ -2941,8 +2947,9 @@ The browser will mark text within this tag in a special manner to highlight it t
 						<string>Defines preformatted text</string>
 						<key>Example</key>
 						<string>&lt;pre&gt;
-    This is some     text.
-    Any line break or     extra    spaces will be kept
+This is some     text.
+Any line break or     extra    spaces 
+will be kept
 &lt;/pre&gt;
   </string>
 						<key>LongDescription</key>
@@ -3124,10 +3131,14 @@ Represents the progress of a task. Can be updated dynamically via javascript.</s
 &lt;p&gt;
     &lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot;&gt;Launch Google in a new browser window!&lt;/a&gt;
     &lt;br/&gt;
-    &lt;a href=&quot;#destination_name&quot;&gt;Destination&lt;/a&gt;
+    &lt;br/&gt;
+    This &lt;a href=&quot;#destination_name&quot;&gt;internal link&lt;/a&gt; will navigate to a destination at the bottom of the page.
 &lt;/p&gt;
+&lt;div style=&quot;height: 400px; background: gray;&quot;&gt;
+    This is a grey area inserted to make the page longer to better demonstrate the internal page link.
+&lt;/div&gt;
 &lt;p&gt;
-    &lt;a name=&quot;destination_name&quot;&gt;&lt;/a&gt;
+    &lt;a name=&quot;destination_name&quot;&gt;This is the destination of the internal page link&lt;/a&gt;
 &lt;/p&gt;
         </string>
 				<key>LongDescription</key>
@@ -3291,10 +3302,11 @@ Currently the &lt;details&gt; tag has limited browser support.
 				<key>Description</key>
 				<string>Defines an HTML form for user input</string>
 				<key>Example</key>
-				<string>&lt;form method=&quot;post&quot; action=&quot;color.aspx&quot;&gt;
+				<string>&lt;form method=&quot;post&quot; action=&quot;red.html&quot;&gt;
 First Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;12&quot; name=&quot;Fname&quot;&gt;&lt;br /&gt;
 Last Name:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Lname&quot;&gt;&lt;br /&gt;
 Favorite Color:&lt;input type=&quot;text&quot; size=&quot;12&quot; maxlength=&quot;36&quot; name=&quot;Color&quot;&gt;&lt;br /&gt;
+&lt;input type=&quot;submit&quot;/&gt;
 &lt;/form&gt;
           </string>
 				<key>LongDescription</key>
