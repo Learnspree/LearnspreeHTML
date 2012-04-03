@@ -331,23 +331,52 @@ The &quot;onclick&quot; attribute can be used to execute javascript code to take
 				<key>Description</key>
 				<string>Used to draw graphics, on the fly, via scripting (usually JavaScript)</string>
 				<key>Example</key>
-				<string>&lt;p&gt;You should see 3 squares below:&lt;/p&gt;
-
-&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
-Your browser doesn&apos;t support canvas.
-&lt;/canvas&gt;
-
-&lt;script&gt;
-var canvas1 = document.getElementById(&apos;myCanvas&apos;);
-if (canvas1.getContext) {
-var context = canvas1.getContext(&apos;2d&apos;);
-context.strokeStyle = &quot;#2E94DE&quot;;
-context.strokeRect(10, 10, 75, 75);
-context.strokeRect(25, 25, 100, 100);
-context.strokeStyle = &quot;#FF0000&quot;;
-context.strokeRect(95, 95, 55, 55);
-}
-&lt;/script&gt;          </string>
+				<string>&lt;html&gt;
+&lt;head&gt;
+      &lt;script type=&quot;text/javascript&quot;&gt;
+        window.onload = function () {
+            var canvas = document.getElementById(&quot;myCanvas&quot;);
+            var context = canvas.getContext(&quot;2d&quot;);
+            var X = 150;
+            var Y = 150;
+            var radius = 50;
+            var PI = Math.PI;
+ 
+            context.fillStyle = &quot;cyan&quot;;
+            context.strokeStyle = &quot;yellow&quot;;
+            context.lineWidth = 5;
+ 
+            // empty square
+            context.strokeRect(40, 40, 75, 75);
+ 
+            // full square
+            context.fillRect(60, 60, 75, 75);
+ 
+            // blue circles
+            context.beginPath();
+            context.arc(X, Y, radius, 0, PI, false);
+            context.arc(X+20, Y-30, radius, 0, 2*PI, false);
+            context.closePath();
+            context.fill();
+            context.stroke();
+ 
+            // red circle
+            context.fillStyle = &quot;red&quot;;
+            context.beginPath();
+            context.arc(X+80, Y-30, radius, 0, 2*PI, false);
+            context.closePath();
+            context.fill();
+            context.stroke();
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;
+    You should see various shapes drawn below within the &quot;canvas&quot; element:
+    &lt;/p&gt;
+    &lt;canvas id=&quot;myCanvas&quot; height=&quot;300&quot; width=&quot;300&quot;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
 				<key>LongDescription</key>
 				<string>New in HTML5.
         
@@ -2421,24 +2450,52 @@ The &lt;video&gt; tag is new to HTML5 and provides the ability to embed video co
 						<key>Description</key>
 						<string>Used to draw graphics, on the fly, via scripting (usually JavaScript)</string>
 						<key>Example</key>
-						<string>&lt;p&gt;You should see 3 squares below:&lt;/p&gt;
-
-&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;
-Your browser doesn&apos;t support canvas.
-&lt;/canvas&gt;
-
-&lt;script&gt;
-var canvas1 = document.getElementById(&apos;myCanvas&apos;);
-if (canvas1.getContext) {
-var context = canvas1.getContext(&apos;2d&apos;);
-context.strokeStyle = &quot;#2E94DE&quot;;
-context.strokeRect(10, 10, 75, 75);
-context.strokeRect(25, 25, 100, 100);
-context.strokeStyle = &quot;#FF0000&quot;;
-context.strokeRect(95, 95, 55, 55);
-}
-&lt;/script&gt;
-  </string>
+						<string>&lt;html&gt;
+&lt;head&gt;
+      &lt;script type=&quot;text/javascript&quot;&gt;
+        window.onload = function () {
+            var canvas = document.getElementById(&quot;myCanvas&quot;);
+            var context = canvas.getContext(&quot;2d&quot;);
+            var X = 150;
+            var Y = 150;
+            var radius = 50;
+            var PI = Math.PI;
+ 
+            context.fillStyle = &quot;cyan&quot;;
+            context.strokeStyle = &quot;yellow&quot;;
+            context.lineWidth = 5;
+ 
+            // empty square
+            context.strokeRect(40, 40, 75, 75);
+ 
+            // full square
+            context.fillRect(60, 60, 75, 75);
+ 
+            // blue circles
+            context.beginPath();
+            context.arc(X, Y, radius, 0, PI, false);
+            context.arc(X+20, Y-30, radius, 0, 2*PI, false);
+            context.closePath();
+            context.fill();
+            context.stroke();
+ 
+            // red circle
+            context.fillStyle = &quot;red&quot;;
+            context.beginPath();
+            context.arc(X+80, Y-30, radius, 0, 2*PI, false);
+            context.closePath();
+            context.fill();
+            context.stroke();
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;
+    You should see various shapes drawn below within the &quot;canvas&quot; element:
+    &lt;/p&gt;
+    &lt;canvas id=&quot;myCanvas&quot; height=&quot;300&quot; width=&quot;300&quot;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
 						<key>LongDescription</key>
 						<string>New in HTML5.
 						
