@@ -8,7 +8,7 @@
 
 #import "LearnspreeHTMLAppDelegate.h"
 #import "CategoryViewController.h"
-#import "FlurryAnalytics.h"
+//#import "FlurryAnalytics.h"
 
 // private helper methods
 @interface LearnspreeHTMLAppDelegate (PrivateMethods)
@@ -26,15 +26,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // initiate flurry
-    [FlurryAnalytics setSessionReportsOnCloseEnabled:false];
-    [FlurryAnalytics startSession:@"D7W187YTQYI7N6CFYRY3"];
+    //[FlurryAnalytics setSessionReportsOnCloseEnabled:false];
+    //[FlurryAnalytics startSession:@"D7W187YTQYI7N6CFYRY3"];
     
     // read the commands (.plist) file and create/populate sub-views based on the contents
 	[self createSubViewsFromCommands];
     [self.tabBarController setViewControllers:self.controllers animated:YES];
     
     // add navigation controller to flurry
-    [FlurryAnalytics logAllPageViews:self.tabBarController];
+    //[FlurryAnalytics logAllPageViews:self.tabBarController];
     
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
@@ -103,7 +103,7 @@
 		[array addObject:navController];
         
         // add navigation controller to flurry
-        [FlurryAnalytics logAllPageViews:navController];
+        //[FlurryAnalytics logAllPageViews:navController];
         
         // release resources not needed anymore
         [navController release];

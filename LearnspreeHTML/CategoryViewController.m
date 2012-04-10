@@ -9,7 +9,7 @@
 #import "AboutViewController.h"
 #import "CategoryViewController.h"
 #import "CommandDetailViewController.h"
-#import "FlurryAnalytics.h"
+//#import "FlurryAnalytics.h"
 
 @implementation CategoryViewController
 
@@ -163,11 +163,11 @@
         }
         
         // log flurry events
-        [FlurryAnalytics logEvent:childController.commandName]; 
-        NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                                 childController.commandName, @"Command",
-                                                 nil];
-        [FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
+        //[FlurryAnalytics logEvent:childController.commandName]; 
+        //NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+        //                                         childController.commandName, @"Command",
+        //                                        nil];
+        //[FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
         
         
         // display the command view

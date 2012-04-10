@@ -7,7 +7,7 @@
 //
 
 #import "CommandDetailViewController.h"
-#import "FlurryAnalytics.h"
+//#import "FlurryAnalytics.h"
 
 
 // private helper methods
@@ -138,23 +138,23 @@
 - (void)displayCommandDetail:(int)selectedSegmentIndex {
     
     // flurry analytics data
-    NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                      [self commandName], @"Command",
-                                      nil];
+    //NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+    //                                  [self commandName], @"Command",
+    //                                  nil];
     
     // show the correct command details according to selected segment
     switch(selectedSegmentIndex) {
         case 0:  
             [self displayFormattedText:commandLongDescription];
-            [FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
+            //[FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
             break; 
         case 1:  
             [self displayFormattedText:commandExample];
-            [FlurryAnalytics logEvent:@"VIEW EXAMPLE" withParameters:flurryDictionary];
+            //[FlurryAnalytics logEvent:@"VIEW EXAMPLE" withParameters:flurryDictionary];
             break; 
         case 2:
             [self displayExampleDemo:commandExample];
-            [FlurryAnalytics logEvent:@"VIEW DEMO" withParameters:flurryDictionary];
+            //[FlurryAnalytics logEvent:@"VIEW DEMO" withParameters:flurryDictionary];
             break;
         default: 
             break;
