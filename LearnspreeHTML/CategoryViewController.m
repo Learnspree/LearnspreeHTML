@@ -36,11 +36,10 @@
 	[imageView release];
     
     // set about page button
-    UIImage* aboutImage = [UIImage imageNamed:@"14-gear.png"];
+    UIImage* aboutImage = [UIImage imageNamed:@"42-mini-info.png"];
     UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithImage:aboutImage style:UIBarButtonItemStylePlain	 target:self action:@selector(showAboutLearnspree:)];          
     self.navigationItem.rightBarButtonItem = aboutButton;
     [aboutButton release];
-
 }
 
 

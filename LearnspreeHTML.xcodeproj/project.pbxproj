@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8688A4EC14ED4D1D00949B40 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8688A4EA14ED4D1D00949B40 /* AboutViewController.m */; };
 		8688A4ED14ED4D1D00949B40 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */; };
+		868B810E1534C0CA001D2E89 /* 42-mini-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 868B810C1534C0CA001D2E89 /* 42-mini-info.png */; };
+		868B810F1534C0CA001D2E89 /* 42-mini-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 868B810D1534C0CA001D2E89 /* 42-mini-info@2x.png */; };
 		869BBC4F151F831500B7E2FF /* yellowPage.html in Resources */ = {isa = PBXBuildFile; fileRef = 869BBC4E151F831500B7E2FF /* yellowPage.html */; };
 		869BBC51151FB82300B7E2FF /* CLOCK.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 869BBC50151FB82300B7E2FF /* CLOCK.MOV */; };
 		869FC84914EFE0DA00B30F9F /* 36-circle-west.png in Resources */ = {isa = PBXBuildFile; fileRef = 869FC84814EFE0DA00B30F9F /* 36-circle-west.png */; };
@@ -62,6 +64,8 @@
 		8688A4E914ED4D1D00949B40 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8688A4EA14ED4D1D00949B40 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		868B810C1534C0CA001D2E89 /* 42-mini-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-mini-info.png"; sourceTree = "<group>"; };
+		868B810D1534C0CA001D2E89 /* 42-mini-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-mini-info@2x.png"; sourceTree = "<group>"; };
 		869BBC4E151F831500B7E2FF /* yellowPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = yellowPage.html; path = Examples/yellowPage.html; sourceTree = "<group>"; };
 		869BBC50151FB82300B7E2FF /* CLOCK.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = CLOCK.MOV; path = Examples/CLOCK.MOV; sourceTree = "<group>"; };
 		869FC84814EFE0DA00B30F9F /* 36-circle-west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "36-circle-west.png"; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 		86A3D5E914D9DB4800AC627F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				868B810C1534C0CA001D2E89 /* 42-mini-info.png */,
+				868B810D1534C0CA001D2E89 /* 42-mini-info@2x.png */,
 				86ACE04E14F2970300097BEE /* fabric@2x.png */,
 				86ACE04C14F28C1200097BEE /* LearnspreeLogo.png */,
 				86ACE04814F2889800097BEE /* aboutscreenfabric.png */,
@@ -332,6 +338,8 @@
 				86B7739A151D27FC005A73C6 /* yellowLink.png in Resources */,
 				869BBC4F151F831500B7E2FF /* yellowPage.html in Resources */,
 				869BBC51151FB82300B7E2FF /* CLOCK.MOV in Resources */,
+				868B810E1534C0CA001D2E89 /* 42-mini-info.png in Resources */,
+				868B810F1534C0CA001D2E89 /* 42-mini-info@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
