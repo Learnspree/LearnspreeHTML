@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8683F3251562E86B001BC629 /* LSMenuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8683F3241562E86B001BC629 /* LSMenuListViewController.m */; };
 		8688A4EC14ED4D1D00949B40 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8688A4EA14ED4D1D00949B40 /* AboutViewController.m */; };
 		8688A4ED14ED4D1D00949B40 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */; };
 		868B810E1534C0CA001D2E89 /* 42-mini-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 868B810C1534C0CA001D2E89 /* 42-mini-info.png */; };
@@ -61,6 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8683F3231562E86B001BC629 /* LSMenuListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMenuListViewController.h; sourceTree = "<group>"; };
+		8683F3241562E86B001BC629 /* LSMenuListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSMenuListViewController.m; sourceTree = "<group>"; };
 		8688A4E914ED4D1D00949B40 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8688A4EA14ED4D1D00949B40 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				8688A4E914ED4D1D00949B40 /* AboutViewController.h */,
 				8688A4EA14ED4D1D00949B40 /* AboutViewController.m */,
 				8688A4EB14ED4D1D00949B40 /* AboutViewController.xib */,
+				8683F3231562E86B001BC629 /* LSMenuListViewController.h */,
+				8683F3241562E86B001BC629 /* LSMenuListViewController.m */,
 			);
 			path = LearnspreeHTML;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				86D26A6814DB21C200A47CC3 /* CategoryViewController.m in Sources */,
 				86D26A6914DB21C200A47CC3 /* CommandDetailViewController.m in Sources */,
 				8688A4EC14ED4D1D00949B40 /* AboutViewController.m in Sources */,
+				8683F3251562E86B001BC629 /* LSMenuListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

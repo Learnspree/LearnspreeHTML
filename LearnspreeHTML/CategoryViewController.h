@@ -7,19 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSMenuListViewController.h"
 
-@class CommandDetailViewController;
+@interface CategoryViewController : LSMenuListViewController {
 
-@interface CategoryViewController : UITableViewController {
-	NSArray *commandList;
-	CommandDetailViewController *childController;
-    CategoryViewController *childCategoryController;
-    NSDictionary *categoryList;
 }
 
-@property (nonatomic,retain) NSArray *commandList;
-@property (nonatomic, retain) NSDictionary *categoryList;
-
-- (IBAction)showAboutLearnspree:(id)sender;
 
 @end
