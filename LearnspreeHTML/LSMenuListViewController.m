@@ -9,7 +9,7 @@
 #import "AboutViewController.h"
 #import "LSMenuListViewController.h"
 #import "CommandDetailViewController.h"
-//#import "FlurryAnalytics.h"
+#import "LSPAnalyticsUtils.h"
 
 @implementation LSMenuListViewController
 
@@ -27,7 +27,7 @@
         cellSubtextColor = [UIColor blackColor];
         cellTextFont = [UIFont fontWithName:@"Courier-Bold" size:14];
         cellSubtextFont = [UIFont fontWithName:@"Courier" size:10];
-        flurryEnabled = NO;
+        analyticsEnabled = YES;
         
         // Set defaults for NIB names
         aboutViewNIBName = @"AboutViewController";
@@ -55,9 +55,10 @@
 	[imageView release];
     
     // set about page button
-    UIImage* aboutImage = [UIImage imageNamed:aboutImageName];
-    UIBarButtonItem *aboutButton = [[UIBarButtonItem alloc] initWithImage:aboutImage style:UIBarButtonItemStylePlain	 target:self action:@selector(showAboutLearnspree:)];          
-    self.navigationItem.rightBarButtonItem = aboutButton;
+    UIButton *aboutButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    [aboutButton setImage:[UIImage imageNamed:aboutImageName] forState:UIControlStateNormal];
+    [aboutButton addTarget:self action:@selector(showAboutLearnspree:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:aboutButton];
     [aboutButton release];
 }
 
@@ -176,14 +177,10 @@
             childController.showDemo = YES;
         }
         
-        // log flurry events
-        if (flurryEnabled)
+        // log analytics events
+        if (analyticsEnabled)
         {
-            //[FlurryAnalytics logEvent:childController.commandName]; 
-            //NSMutableDictionary *flurryDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-            //                                        childController.commandName, @"Command",
-            //                                        nil];
-            //[FlurryAnalytics logEvent:@"VIEW DESCRIPTION" withParameters:flurryDictionary];
+            [LSPAnalyticsUtils registerScreenViewForScreenName:childController.commandName];
         }
         
         // display the command view

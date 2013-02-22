@@ -25,7 +25,7 @@
     UIColor *cellSubtextColor;
     UIFont *cellTextFont;
     UIFont *cellSubtextFont;
-    BOOL flurryEnabled;
+    BOOL analyticsEnabled;
     
     // configurable NIB resource names for MVC flexibility
     NSString *aboutViewNIBName;
